@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_708650_pfm_security</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Ensure One Symbol per Portfolio</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[/*
+ * Script ensures that at maximum only 1 record per security in the same portfolio exists
+ *
+ * Revision History
+ * JR - 10/11/2021 - Initial Script Creation
+*/
+
+(function executeRule(current, previous /*null when async*/) {
+	
+	// Initialize variables
+	var exisitingRecord = "";
+	var securityUrl = "";
+	var link = "";
+
+	// Check if an exisiting security exists within this portfolio
+	var grSecurity = new GlideRecord("x_708650_pfm_security");
+	grSecurity.addQuery('symbol', current.symbol);
+	grSecurity.addQuery('portfolio', current.portfolio);
+	grSecurity.query();
+	if(grSecurity.next() && grSecurity.sys_id != current.sys_id){
+		
+		// If a duplicate security exists, create a URL to link to the exisiting security record
+		exisitingRecord = grSecurity.getUniqueValue();
+		securityUrl = "/x_708650_pfm_security?sys_id=" + exisitingRecord;
+		link = '<a href="' + securityUrl + '">here</a>';	
+		var message = gs.getMessage('A security of the same symbol already exists in this portfolio. Please click ') + link + gs.getMessage(' to access the exisiting security.');
+		gs.addErrorMessage(message);
+		current.setAbortAction(true);
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 21:44:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f2cde032fc7301036b3d6c6f699b680</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Ensure One Symbol per Portfolio</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_script_6f2cde032fc7301036b3d6c6f699b680</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 22:14:12</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f2cde032fc7301036b3d6c6f699b680"/>
+</record_update>

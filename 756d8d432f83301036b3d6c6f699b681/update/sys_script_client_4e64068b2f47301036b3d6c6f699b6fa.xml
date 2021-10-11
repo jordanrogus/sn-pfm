@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>symbol</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate and Populate Security Info</name>
+        <order/>
+        <script><![CDATA[/*
+ * Runs an AJAX call to valildate the submitted symbol and then populate relevant information to the record 
+ *
+ * Revision History
+ * JR - 10/11/2021 - Initial Script Creation
+*/
+
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	
+	
+	// Ensure symbol is capitalized
+	var str = g_form.getValue('symbol');
+	if(!(str === str.toUpperCase())){
+		str = str.toUpperCase();
+		g_form.setValue('symbol',str);
+	}
+	
+	
+	// Clears previous symbol data
+	g_form.clearValue("name");
+	g_form.clearValue("type");
+	
+	// Retrieves value in the symbol field
+	var inputtedSymbol = g_form.getValue("symbol");
+	
+	// Runs GlideAjax
+	var ga = new GlideAjax('x_708650_pfm.pfmClientCallableUtils');
+    ga.addParam('sysparm_name', 'getSymbolInformation');
+    ga.addParam('sysparm_symbol', inputtedSymbol);
+    ga.getXML(updateSymbol);
+   
+}
+
+// Callback to populate information for the security
+function updateSymbol(response) {
+
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+	
+	// Parse JSON response
+	answer = JSON.parse(answer);
+	
+	// Check if stock symbol gave a response from Yahoo Financials
+	if(answer.quoteResponse.result[0]){
+		
+		// If yes - populate information
+		g_form.setValue('name',answer.quoteResponse.result[0].longName);
+		
+		if(answer.quoteResponse.result[0].quoteType == "MUTUALFUND"){
+			g_form.setValue('type',"Mutual Fund");
+		} else if(answer.quoteResponse.result[0].quoteType == "EQUITY"){
+			g_form.setValue('type',"Stock");
+		} else {
+			g_form.setValue('type',"Other");
+		}
+		
+	} else {
+		
+		// If no - clear value and show error field message
+		g_form.clearValue("symbol");
+		g_form.showFieldMsg("symbol", "Symbol not found in Yahoo Financials. Please try again.", "error");
+		
+	}
+}
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 20:01:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4e64068b2f47301036b3d6c6f699b6fa</sys_id>
+        <sys_mod_count>43</sys_mod_count>
+        <sys_name>Validate and Populate Security Info</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_script_client_4e64068b2f47301036b3d6c6f699b6fa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 22:51:28</sys_updated_on>
+        <table>x_708650_pfm_security</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

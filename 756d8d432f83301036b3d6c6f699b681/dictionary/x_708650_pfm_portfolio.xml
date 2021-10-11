@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Portfolio" max_length="40" name="x_708650_pfm_portfolio" type="collection">
-        <element attributes="encode_utf8=false" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+    <element audit="true" label="Portfolio" max_length="40" name="x_708650_pfm_portfolio" type="collection">
+        <element label="Name" mandatory="true" max_length="120" name="name" type="string"/>
+        <element attributes="encode_utf8=false" label="User" max_length="32" name="user" read_only="true" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="user"/>
         </index>

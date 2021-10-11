@@ -13,28 +13,28 @@
         <mobile_title>All</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_708650_pfm_portfolio</name>
-        <order>3</order>
+        <order>1300</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles/>
+        <roles>x_708650_pfm.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-11 16:04:41</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>436e09072f83301036b3d6c6f699b69b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>All</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>All Portfolios</sys_name>
         <sys_overrides/>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
         <sys_policy/>
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_app_module_436e09072f83301036b3d6c6f699b69b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-11 16:04:41</sys_updated_on>
+        <sys_updated_on>2021-10-11 19:09:28</sys_updated_on>
         <timeline_page/>
-        <title>All</title>
+        <title>All Portfolios</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>
