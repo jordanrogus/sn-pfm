@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_708650_pfm.pfmClientCallableUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>pfmClientCallableUtils</name>
+        <script><![CDATA[var pfmClientCallableUtils = Class.create();
+pfmClientCallableUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	/*
+	 * Return to the client information related to the passed in security
+	 *
+	 * Revision History
+	 * JR - 10/11/2021 - Initial Script Creation
+	*/
+	getSymbolInformation: function(){
+		
+		// Retrieve inputted symbol
+		var symbol = this.getParameter('sysparm_symbol');		
+		
+		// Call function to retrieve information from Yahoo Financials
+		var pfmUtils = new x_708650_pfm.pfmUtils;
+		var symbolInformation = pfmUtils.getFinancialSecurityDetails(symbol);
+				
+		// Return information retrieved
+		return symbolInformation;
+	},
+	
+    type: 'pfmClientCallableUtils'
+	
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 20:06:04</sys_created_on>
+        <sys_id>e695c6cb2f47301036b3d6c6f699b6ef</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>pfmClientCallableUtils</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_script_include_e695c6cb2f47301036b3d6c6f699b6ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 21:28:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>symbol</name>
+        <rest_message_function display_value="GET Quote">ebfb75832f47301036b3d6c6f699b6e3</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 19:28:17</sys_created_on>
+        <sys_id>6d0d35c32f47301036b3d6c6f699b69c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>symbol</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_6d0d35c32f47301036b3d6c6f699b69c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 19:44:48</sys_updated_on>
+        <type>string</type>
+        <value>FSDAX</value>
+    </sys_rest_message_fn_parameters>
+</record_update>
