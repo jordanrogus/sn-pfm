@@ -6,7 +6,6 @@ GOAL:
 2. Play w/ UI Builder
 
 DEV ITEMS:
-1. Client script so if name filled and price 0 = calc to occur at end of day (8pm)
-2. Script include for rest
-3. Client AJAX to confirm stock symbol is real and if so bring in values
-4. Scheduled job to run on weekdays at night to pull in values - write so api call happens once per stock symbol
+1. Info message to script include in the event of a 429 error where limit of calls exceeded.
+2. Fun way to track number of calls
+3. Local DB of stock symbol, day and json response - Minimizes number of calls
