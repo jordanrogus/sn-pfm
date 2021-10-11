@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_708650_pfm.admin" name="x_708650_pfm.admin">237d41cb2f03301036b3d6c6f699b6a6</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 16:00:37</sys_created_on>
+        <sys_id>2f7d41cb2f03301036b3d6c6f699b6a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>237d41cb2f03301036b3d6c6f699b6a6</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_embedded_help_role_2f7d41cb2f03301036b3d6c6f699b6a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 16:00:37</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
