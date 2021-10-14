@@ -6,4 +6,4 @@ GOAL:
 2. Play w/ UI Builder
 
 DEV ITEMS:
-1. Make UI page work with variables and formatting
+1. Plan for budgeting component
