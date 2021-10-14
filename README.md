@@ -6,5 +6,4 @@ GOAL:
 2. Play w/ UI Builder
 
 DEV ITEMS:
-1. Update script include logic to account for updates over the weekend
-2. Make UI page work with variables and formatting
+1. Make UI page work with variables and formatting
