@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Yahoo Financials API Call" max_length="40" name="x_708650_pfm_security_information_db" sizeclass="28" type="collection">
+        <element label="Request Date and Time" max_length="40" name="request_date_and_time" read_only="true" type="glide_date_time"/>
+        <element label="Request Response" max_length="10000" name="request_response" read_only="true" type="string"/>
+        <element label="Symbol" max_length="20" name="symbol" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="type" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Stock" sequence="0" value="Stock"/>
+                <element inactive_on_update="false" label="Mutual Fund" sequence="1" value="Mutual Fund"/>
+                <element inactive_on_update="false" label="Other" sequence="2" value="Other"/>
+            </choice>
+        </element>
+    </element>
+</database>

@@ -14,7 +14,8 @@
  * Runs an AJAX call to valildate the submitted symbol and then populate relevant information to the record 
  *
  * Revision History
- * JR - 10/11/2021 - Initial Script Creation
+ * JR - 10/12/2021 - Initial Script Creation
+ * JR - 10/13/2021 - Cleaned up comments
 */
 
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
@@ -22,58 +23,88 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
       return;
    }
 	
-	
-	// Ensure symbol is capitalized
+	// Ensure symbol is capitalized - If not, capitalize and kill the current run of the script. As capitalizing is a change to the field this script will re-execute and run
 	var str = g_form.getValue('symbol');
 	if(!(str === str.toUpperCase())){
 		str = str.toUpperCase();
 		g_form.setValue('symbol',str);
+		return;
 	}
-	
 	
 	// Clears previous symbol data
 	g_form.clearValue("name");
 	g_form.clearValue("type");
+	g_form.clearValue("quantity");
+	g_form.clearValue("price");
+	g_form.clearValue("value");
+	g_form.clearValue("price_as_of");
 	
 	// Retrieves value in the symbol field
 	var inputtedSymbol = g_form.getValue("symbol");
 	
-	// Runs GlideAjax
+	// Runs GlideAjax by passing in the inputted symbol
 	var ga = new GlideAjax('x_708650_pfm.pfmClientCallableUtils');
-    ga.addParam('sysparm_name', 'getSymbolInformation');
+    ga.addParam('sysparm_name', 'getFinancialSecurityInfo');
     ga.addParam('sysparm_symbol', inputtedSymbol);
-    ga.getXML(updateSymbol);
+    ga.getXML(updateFinancialSecurity);
    
 }
 
 // Callback to populate information for the security
-function updateSymbol(response) {
-
+function updateFinancialSecurity(response) {
+	
+	// Retrieve response from client callable script include
     var answer = response.responseXML.documentElement.getAttribute("answer");
 	
-	// Parse JSON response
+	// Parse JSON response from string to object
 	answer = JSON.parse(answer);
 	
-	// Check if stock symbol gave a response from Yahoo Financials
-	if(answer.quoteResponse.result[0]){
+	// If JSON response does not have the quoteResponse property then something was wrong with the connection to Yahoo Financials so send an error message
+	if(!answer.hasOwnProperty('quoteResponse')){
+		g_form.addErrorMessage('Issue connecting with Yahoo Financials. Please contact the application administrator to look at the logs.');
+		return;
+	}
+	
+	// Retrieve the individual security info from the response
+	var individualSecurityInfo = answer.quoteResponse.result[0];
+	
+	// Check if stock symbol gave a response from Yahoo Financials. If yes apply updated information to the record
+	if(individualSecurityInfo){
 		
-		// If yes - populate information
-		g_form.setValue('name',answer.quoteResponse.result[0].longName);
-		
-		if(answer.quoteResponse.result[0].quoteType == "MUTUALFUND"){
-			g_form.setValue('type',"Mutual Fund");
-		} else if(answer.quoteResponse.result[0].quoteType == "EQUITY"){
-			g_form.setValue('type',"Stock");
-		} else {
-			g_form.setValue('type',"Other");
+		// Check if the individual security info has a longName property
+		if(individualSecurityInfo.hasOwnProperty('longName')){
+			
+			// Set name from longName property
+			g_form.setValue('name',individualSecurityInfo.longName);
+			
 		}
 		
-	} else {
+		// Check if the individual security info has a regularMarketPrice property
+		if(individualSecurityInfo.hasOwnProperty('regularMarketPrice')){
+			
+			// Set price from regularMarketPrice property
+			var price = individualSecurityInfo.regularMarketPrice;
+			g_form.setValue('price','USD;' + price); // Format as currency
+			
+		}
+				
+		// Check if the individual security info has a quoteType property
+		if(individualSecurityInfo.hasOwnProperty('quoteType')){
+			
+			// Set type from quoteType property after a mapping
+			if(individualSecurityInfo.quoteType == "MUTUALFUND"){
+				g_form.setValue('type',"Mutual Fund");
+			} else if(individualSecurityInfo.quoteType == "EQUITY"){
+				g_form.setValue('type',"Stock");
+			} else {
+				g_form.setValue('type',"Other");
+			}
+		}
 		
-		// If no - clear value and show error field message
+	// If no result properties from the returned JSON string then something was incorrect with the inputted symbol
+	} else {
 		g_form.clearValue("symbol");
 		g_form.showFieldMsg("symbol", "Symbol not found in Yahoo Financials. Please try again.", "error");
-		
 	}
 }
 
@@ -84,7 +115,7 @@ function updateSymbol(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4e64068b2f47301036b3d6c6f699b6fa</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>Validate and Populate Security Info</sys_name>
         <sys_overrides/>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
@@ -92,7 +123,7 @@ function updateSymbol(response) {
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_client_4e64068b2f47301036b3d6c6f699b6fa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-11 22:51:28</sys_updated_on>
+        <sys_updated_on>2021-10-14 16:02:04</sys_updated_on>
         <table>x_708650_pfm_security</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

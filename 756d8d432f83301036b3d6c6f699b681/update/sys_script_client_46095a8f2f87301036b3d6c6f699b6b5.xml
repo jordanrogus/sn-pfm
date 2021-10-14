@@ -8,20 +8,21 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Explain Price Retrieval Cadence</name>
+        <name>Explain Price as of Cadence</name>
         <order/>
         <script><![CDATA[/*
  * Provides a user-friendly info message around the cadence for retrieving prices from Yahoo if a security does not have a price
  *
  * Revision History
  * JR - 10/11/2021 - Initial Script Creation
+ * JR - 10/13/2021 - Updated time in the field message to 4pm MT from 8pm MT
 */
 
 function onLoad() {
 	
 	// If the symbol is captured, but no price is set then the symbol was just entered and this message will let the user know that the price will automatically be pulled from Yahoo Financials in the evening.
-	if(g_form.getValue("symbol") != "" && g_form.getValue("price") == 'USD;0.00'){
-		g_form.showFieldMsg("price","The price for this security will be retrieved from Yahoo Financials at 8pm MT", "info");
+	if(g_form.getValue("symbol") != "" && g_form.getValue("price_as_of") == ''){
+		g_form.showFieldMsg("price_as_of","The price seen might be a day outdated based on its security type and when it was inputted. The price and the price as of fields will synch up and be updated at the close of the next market day", "info");
 	}
    
 }]]></script>
@@ -31,15 +32,15 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>46095a8f2f87301036b3d6c6f699b6b5</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Explain Price Retrieval Cadence</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Explain Price as of Cadence</sys_name>
         <sys_overrides/>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
         <sys_policy/>
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_client_46095a8f2f87301036b3d6c6f699b6b5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-11 21:38:41</sys_updated_on>
+        <sys_updated_on>2021-10-14 16:04:58</sys_updated_on>
         <table>x_708650_pfm_security</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

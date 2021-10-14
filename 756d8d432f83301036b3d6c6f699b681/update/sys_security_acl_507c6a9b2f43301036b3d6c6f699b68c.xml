@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_708650_pfm_security_information_db</description>
+        <name>x_708650_pfm_security_information_db</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-12 17:33:57</sys_created_on>
+        <sys_id>507c6a9b2f43301036b3d6c6f699b68c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_708650_pfm_security_information_db</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_security_acl_507c6a9b2f43301036b3d6c6f699b68c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-12 17:33:57</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>
