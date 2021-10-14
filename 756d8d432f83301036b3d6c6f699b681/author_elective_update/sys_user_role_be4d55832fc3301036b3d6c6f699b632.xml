@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_708650_pfm.security_user</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>security_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 17:09:39</sys_created_on>
+        <sys_id>be4d55832fc3301036b3d6c6f699b632</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_708650_pfm.security_user</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_user_role_be4d55832fc3301036b3d6c6f699b632</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 17:09:39</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>9b6a549a6f4bd6001a75a9cc5d3ee454</instance_id>
+        <instance_name>dev22865</instance_name>
+        <name>sys_user_role_be4d55832fc3301036b3d6c6f699b632</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_708650_pfm.security_user</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix>security_user</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-11 17:09:39</sys_created_on><sys_id>be4d55832fc3301036b3d6c6f699b632</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_708650_pfm.security_user</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_user_role_be4d55832fc3301036b3d6c6f699b632</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-11 17:09:39</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>-841037916</payload_hash>
+        <record_name>x_708650_pfm.security_user</record_name>
+        <reverted_from/>
+        <source>d4d099472f83301036b3d6c6f699b65c</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 17:09:39</sys_created_on>
+        <sys_id>7e4d55832fc3301036b3d6c6f699b637</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c7054d1500000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 17:09:39</sys_updated_on>
+        <type>Role</type>
+        <update_guid>b64d55833ac33010cc0ecd0828e27937</update_guid>
+        <update_guid_history>b64d55833ac33010cc0ecd0828e27937:-841037916</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_708650_pfm.security_user">4ae16dc72fc3301036b3d6c6f699b6fb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 17:29:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>279530d66f364df08be03ca723ec1719</sys_id>
+        <sys_metadata>be4d55832fc3301036b3d6c6f699b632</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_708650_pfm.security_user</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_user_role_be4d55832fc3301036b3d6c6f699b632</sys_update_name>
+        <sys_update_version display_value="sys_user_role_be4d55832fc3301036b3d6c6f699b632">7e4d55832fc3301036b3d6c6f699b637</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 17:29:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
