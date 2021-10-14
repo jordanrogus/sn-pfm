@@ -50,10 +50,16 @@
 		
 		// If a duplicate security exists, create a URL to link to the exisiting security record
 		exisitingRecord = grSecurity.getUniqueValue();
+		
 		securityUrl = "/x_708650_pfm_security?sys_id=" + exisitingRecord;
 		link = '<a href="' + securityUrl + '">here</a>';	
+		
+		// Set an error message linking to the URL
 		var message = gs.getMessage('A security of the same symbol already exists in this portfolio. Please click ') + link + gs.getMessage(' to access the exisiting security.');
+		
 		gs.addErrorMessage(message);
+		
+		// Ensure record cannot be submitted to database
 		current.setAbortAction(true);
 	}
 
@@ -64,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6f2cde032fc7301036b3d6c6f699b680</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Ensure One Symbol per Portfolio</sys_name>
         <sys_overrides/>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
@@ -72,7 +78,7 @@
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_6f2cde032fc7301036b3d6c6f699b680</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-11 22:14:12</sys_updated_on>
+        <sys_updated_on>2021-10-13 20:34:55</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

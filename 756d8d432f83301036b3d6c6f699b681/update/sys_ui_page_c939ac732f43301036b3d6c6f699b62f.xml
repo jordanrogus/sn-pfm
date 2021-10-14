@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[// Retrieve the API Count and Limit from the HTML evaluate tags as integers
+var apiCount = parseInt(gel('apiCount').value);
+var apiLimit = parseInt(gel('apiLimit').value);
+
+// Calculate the perecentage of the limit used
+var percentOfLimit = (apiCount/apiLimit)*100;
+
+// Create a dynamic title for the chart
+var call = "";
+if (apiCount == 1){
+	call = "call";
+} else {
+	call = "calls";
+}
+title = apiCount + " API " + call + " used out of " + apiLimit;
+
+// Initialize the highchart and configure the attributes as necessary
+// Link to resource: https://www.highcharts.com/demo/gauge-activity
+var chart = new Highcharts.chart({
+	
+    chart: {
+		renderTo: 'highchart-container',
+        type: 'solidgauge',
+        height: '110%'
+    },
+
+    title: {
+        text: title,
+        style: {
+            fontSize: '24px'
+        }
+    },
+
+    tooltip: {
+        borderWidth: 0,
+        backgroundColor: 'none',
+        shadow: false,
+        style: {
+            fontSize: '16px'
+        },
+        valueSuffix: '%',
+        pointFormat: '<div style="font-size:2em; color: {point.color}; font-weight: bold;">' + apiCount + ' ' + call + '</br>of ' + apiLimit + '</div>',
+        positioner: function (labelWidth) {
+            return {
+                x: (this.chart.chartWidth - labelWidth) / 2,
+                y: (this.chart.plotHeight / 2) + 15
+            };
+        }
+    },
+
+    pane: {
+        startAngle: 0,
+        endAngle: 360,
+        background: [{ // Track for Move
+            outerRadius: '112%',
+            innerRadius: '75%',
+            backgroundColor: Highcharts.color(Highcharts.getOptions().colors[0])
+                .setOpacity(0.3)
+                .get(),
+            borderWidth: 0
+        }]
+    },
+
+    yAxis: {
+        min: 0,
+        max: 100,
+        lineWidth: 0,
+        tickPositions: []
+    },
+
+    plotOptions: {
+        solidgauge: {
+            dataLabels: {
+                enabled: false
+            },
+            linecap: 'round',
+            stickyTracking: false,
+            rounded: true
+        }
+    },
+
+    series: [{
+        name: 'Count',
+        data: [{
+            color: Highcharts.getOptions().colors[0],
+            radius: '112%',
+            innerRadius: '75%',
+            y: percentOfLimit
+        }]
+    }]
+});]]></client_script>
+        <description>Tracks the number of Yahoo Financial API Calls per Day</description>
+        <direct>false</direct>
+        <endpoint>x_708650_pfm_trackYahooFinanceAPICalls.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<!-- Bring in required highchart libraries-->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	
+	<!-- Visualize the highchart-->
+	<figure class="highcharts-figure">
+		<div id="highchart-container"></div>
+	</figure>
+	
+	<!-- Style the highchart-->
+	<style>
+		#container {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		.highcharts-figure, .highcharts-data-table table {
+			min-width: 380px;    
+			max-width: 500px;
+			margin: 0 auto;
+		}
+
+		.highcharts-data-table table {
+			font-family: Verdana, sans-serif;
+			border-collapse: collapse;
+			border: 1px solid #EBEBEB;
+			margin: 10px auto;
+			text-align: center;
+			width: 100%;
+			max-width: 500px;
+		}
+		.highcharts-data-table caption {
+			padding: 1em 0;
+			font-size: 1.2em;
+			color: #555;
+		}
+		.highcharts-data-table th {
+			font-weight: 600;
+			padding: 0.5em;
+		}
+		.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+			padding: 0.5em;
+		}
+		.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+			background: #f8f8f8;
+		}
+		.highcharts-data-table tr:hover {
+			background: #f1f7ff;
+		}
+	</style>
+	
+	<!-- 
+	Evaluate to retrieve the API limit from the property and get a count of the 
+	the API's ran today by querying the x_708650_pfm_security_information_db table
+	-->
+    <g:evaluate>
+		var apiLimit = gs.getProperty('x_708650_pfm.yahooFinancialUsageLimit');
+        var grApiCountCheck = new GlideRecord("x_708650_pfm_security_information_db");
+      grApiCountCheck.addEncodedQuery('request_date_and_timeONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()');
+        grApiCountCheck.query();
+    </g:evaluate>
+	
+	<!-- Ensure the variables are accessible by the client script -->
+	<input type="hidden" name="apiCount" id="apiCount" value="$[grApiCountCheck.getRowCount()]"/>
+	<input type="hidden" name="apiLimit" id="apiLimit" value="${apiLimit}"/>
+
+</j:jelly>]]></html>
+        <name>trackYahooFinanceAPICalls</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-13 21:18:08</sys_created_on>
+        <sys_id>c939ac732f43301036b3d6c6f699b62f</sys_id>
+        <sys_mod_count>93</sys_mod_count>
+        <sys_name>trackYahooFinanceAPICalls</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ui_page_c939ac732f43301036b3d6c6f699b62f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-14 15:39:50</sys_updated_on>
+    </sys_ui_page>
+</record_update>

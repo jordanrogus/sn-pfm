@@ -11,21 +11,122 @@
 pfmUtils.prototype = {
 	
     initialize: function() {
+		
     },
 	
 	/*
-	 * Retrieves information related to the passed in security
+	 * Retrieves information related to the passed in security. Broken into 2 steps:
+	 *
+	 * STEP 1:
+	 * Check if their needs to be an API call for the passed in symbol to fetch updated data from Yahoo Finance and push it into the local DB. There does not need to be an API call in the following scenarios:
+	 *   1. The check is happening before the market closes on the current day and there is a value in the local database (x_708650_pfm_security_information_db) for the stock symbol after market close of the prior day
+	 *   2. The check is happening after the market closes on the current day and there is a value in the local database (x_708650_pfm_security_information_db) for the stock symbol after market close of the current day
+	 *
+	 * STEP 2:
+	 * If it is not in the local DB it calls the API and adds it to the local DB
 	 *
 	 * Revision History
-	 * JR - 10/11/2021 - Initial Script Creation
+	 * JR - 10/12/2021 - Initial Script Creation
+	 * JR - 10/13/2021 - Cleaned up script
 	*/
-	getFinancialSecurityDetails: function(symbol){
+	getFinancialSecurityInfoFromYahooFinancials: function(symbol){
+		
+	////////////////////////////////////////// Step 1. Check if in Local DB //////////////////////////////////////////
+	
+		// Get current day/time in UTC
+		var gdt_now = new GlideDateTime();
+		
+		// Extract the time
+		gdt_now = gdt_now.getTime();
+
+		// Set GlideTime object for when market closes in UTC (22:00:00 UTC)
+		var gdt_marketClose = new GlideTime();
+		gdt_marketClose.setValue('22:00:00');
+
+		// Compare times
+		var compareTimes = gdt_now > gdt_marketClose;
+		
+		// If the time the script runs is before the market closes on the current day
+		if(compareTimes == false){
+			
+			// Set GlideTime object for when day starts in UTC (00:00:00 UTC)
+			var gdt_dayStart = new GlideTime();
+			gdt_dayStart.setValue('00:00:00');
+			
+			// Calculate the difference in times using minutes from start of day to now
+			var diffMinutesSOD = GlideDate.subtract(gdt_dayStart, gdt_now);
+			diffMinutesSOD = diffMinutesSOD.getNumericValue()/(1000*60);
+			diffMinutesSOD = diffMinutesSOD.toFixed(2); // 2 decimal places
+			
+			// Add minutes from start of day to now with 120 minutes signifying 2 hours from 22:00:00 UTC to 00:00:00 UTC of the prior day after market close
+			diffMinutesSOD = diffMinutesSOD + 120;
+			
+			// Check in the local database if there is a value from yesterday after close or today
+			var grChkBeforeMarketClose = new GlideRecord("x_708650_pfm_security_information_db");
+			grChkBeforeMarketClose.addQuery("symbol", symbol);
+			grChkBeforeMarketClose.addEncodedQuery('request_date_and_timeRELATIVEGT@minute@ago@' + diffMinutesSOD);
+			grChkBeforeMarketClose.orderByDesc('request_date_and_time');
+			grChkBeforeMarketClose.setLimit(1);
+			grChkBeforeMarketClose.query();
+			if (grChkBeforeMarketClose.next()) {
 				
+				// If so return the JSON of the response in the local DB
+				return grChkBeforeMarketClose.getValue('request_response');
+			}
+			
+		// If the time the script runs is after the market closes on the current day
+		} else {
+			
+			// Calculate the difference in times using minutes from market close to now
+			var diffMinutesMC = GlideDate.subtract(gdt_marketClose, gdt_now); 
+			diffMinutesMC = diffMinutesMC.getNumericValue()/(1000*60);
+			diffMinutesMC = diffMinutesMC.toFixed(2); // 2 decimal places
+			
+			// Is there a value from today after market close
+			var grChkAfterMarketClose = new GlideRecord("x_708650_pfm_security_information_db");
+			grChkAfterMarketClose.addQuery("symbol", symbol);
+			grChkAfterMarketClose.addEncodedQuery('request_date_and_timeRELATIVEGT@minute@ago@' + diffMinutesMC);
+			grChkAfterMarketClose.orderByDesc('request_date_and_time');
+			grChkAfterMarketClose.setLimit(1);
+			grChkAfterMarketClose.query();
+			if (grChkAfterMarketClose.next()) {
+				
+				// If so return the JSON of the response in the local DB
+				return grChkAfterMarketClose.getValue('request_response');
+			}			
+		}
+		
+		////////////////////////////////////////// Step 2. Call API //////////////////////////////////////////
+						
+		// Initialize error message
+		var errorMessage = "";
+		
+		// Retrieve the app property that houses the API key
+		var apiKey = gs.getProperty("x_708650_pfm.yahooFinancialAPIKey");
+
+		// If the api key is empty then log an error message and break out of the function
+		if(apiKey == ""){
+			
+			// Create error message
+			errorMessage = 'No API key definied in the PFM application property';
+				
+			// Log error message
+			gs.error(errorMessage);
+				
+			// Return JSON object of error code and message
+			return this.__createErrorObject(0, errorMessage);
+			
+		}
+		
 		try {
 			
 			// Call Rest Message
 			var r = new sn_ws.RESTMessageV2('x_708650_pfm.Yahoo Finance API', 'GET Quote');
+			// Substitute passed in symbol into the request
 			r.setStringParameterNoEscape('symbol', symbol);
+			
+			// Set the header to pass in the API key definied in the app property
+			r.setRequestHeader("x-api-key",apiKey);
 
 			//if the message is configured to communicate through ECC queue, either
 			//by setting a MID server or calling executeAsync, one needs to set skip_sensor
@@ -37,15 +138,86 @@ pfmUtils.prototype = {
 			var responseBody = response.getBody();
 			var httpStatus = response.getStatusCode();
 			
-			// Return response
-			return responseBody;
+			// Action differs depending on status code of API call
+			switch(httpStatus.toString()){
+					
+				// Successful API call
+				case '200':
+					
+					// Insert record into DB
+					var grInsert = new GlideRecord("x_708650_pfm_security_information_db");
+					grInsert.initialize();
+					grInsert.request_date_and_time = new GlideDateTime();
+					grInsert.request_response = responseBody.toString();
+					grInsert.insert();
 
+					// Return response
+					return responseBody;
+					
+				// If the returned status code is 429 then you have hit the daily usage limit for the definied API key
+				case '429':
+					
+					// Create error message
+					errorMessage = 'API daily usage met. Please consider upgrading your plan on yahoo financials';
+
+					// Log error message
+					gs.error(errorMessage);
+
+					// Return JSON object of error code and message
+					return this._createErrorObject(httpStatus, errorMessage);
+					
+				// If the returned status code is 403 then the username/password is incorrect. Usually this is due to the api key being inputted incorrectly
+				case '403':
+					
+					// Create error message
+					errorMessage = 'API key is incorrect. Please validate the correct api key is inputted into the x_708650_pfm.yahooFinancialAPIKey application property';
+
+					// Log error message
+					gs.error(errorMessage);
+
+					// Return JSON object of error code and message
+					return this._createErrorObject(httpStatus, errorMessage);
+					
+				// If status code does not match those described above in switch
+				default: 
+					
+					// Create error message
+					errorMessage = 'Unknown error with API';
+
+					// Log error message
+					gs.error(errorMessage);
+
+					// Return JSON object of error code and message
+					return this._createErrorObject(httpStatus, errorMessage);
+			}
+			
 		// If error log message
 		} catch (ex) {
-			var message = ex.message;
-			gs.info("Issue with Yahoo Finance API. Message: " + message);
+						
+			// Create error message
+			errorMessage = 'Issue with yahoo financials api. Message: ' + ex.message;
+
+			// Log error message
+			gs.error(errorMessage);
+
+			// Return JSON object of error code and message
+			return this._createErrorObject(0, errorMessage);
 		}		
+	},
+	
+	/*
+	 * Helper function to create a JSON object of a passed in error code and message
+	 *
+	 * Revision History
+	 * JR - 10/12/2021 - Initial Script Creation
+	*/
+	_createErrorObject: function(error_code,error_message){
 		
+		var obj = new Object();
+		obj.error_code = error_code;
+		obj.error_message = error_message;
+		var jsonString = JSON.stringify(obj);
+		return jsonString;
 	},
 
     type: 'pfmUtils'
@@ -54,13 +226,13 @@ pfmUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-11 20:10:10</sys_created_on>
         <sys_id>2596460f2f47301036b3d6c6f699b648</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>pfmUtils</sys_name>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_include_2596460f2f47301036b3d6c6f699b648</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-11 21:29:42</sys_updated_on>
+        <sys_updated_on>2021-10-13 20:59:27</sys_updated_on>
     </sys_script_include>
 </record_update>

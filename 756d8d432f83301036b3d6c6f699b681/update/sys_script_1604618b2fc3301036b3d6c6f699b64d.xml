@@ -32,6 +32,7 @@
  *
  * Revision History
  * JR - 10/11/2021 - Initial Script Creation
+ * JR - 10/13/2021 - Inactivated script as users should have ability to create multipl portfolios
 */
 
 (function executeRule(current, previous /*null when async*/) {
@@ -47,12 +48,18 @@
 	grPortfolio.query();
 	if(grPortfolio.next() && grPortfolio.sys_id != current.sys_id){
 		
-		// If a portfolio exists, create a URL to link to the exisiting portfolio record
+		// If a portfolio exists, create a URL to link to the exisiting record
 		exisitingRecord = grPortfolio.getUniqueValue();
+		
 		portfolioUrl = "/x_708650_pfm_portfolio?sys_id=" + exisitingRecord;
 		link = '<a href="' + portfolioUrl + '">here</a>';
+		
+		// Add error message with link to the exisiting record
 		var message = gs.getMessage('A portfolio already exists for this user. Please click ') + link + gs.getMessage(' to access the exisiting portfolio.');
+		
 		gs.addErrorMessage(message);
+		
+		// Ensure record cannot be submitted to database
 		current.setAbortAction(true);
 	}
 
@@ -63,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1604618b2fc3301036b3d6c6f699b64d</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Ensure One Portfolio per User</sys_name>
         <sys_overrides/>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
@@ -71,7 +78,7 @@
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_1604618b2fc3301036b3d6c6f699b64d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-11 22:15:08</sys_updated_on>
+        <sys_updated_on>2021-10-13 20:33:57</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

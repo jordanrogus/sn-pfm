@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_708650_pfm_security_information_db</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Extract Symbol and Type for Local DB</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[/*
+ * Extract the symbol and type from the JSON response and populate the symbol and type field on the Security Information DB table
+ *
+ * Revision History
+ * JR - 10/12/2021 - Initial Script Creation
+*/
+
+(function executeRule(current, previous /*null when async*/) {
+
+	// Get request response as JSON
+	var response = current.request_response;
+	response = JSON.parse(response);
+	
+	// Confirm response has the appropriate first level property
+	if(response.hasOwnProperty('quoteResponse')){
+		
+		// Retrieve the individual security info from the response
+		var individualSecurityInfo = response.quoteResponse.result[0];
+		
+		// Check if the individual security info has a quoteType property
+		if(individualSecurityInfo.hasOwnProperty('quoteType')){
+			
+			// If property exist, update the type on the current record based on value
+			if(individualSecurityInfo.quoteType == "MUTUALFUND"){
+				current.type = "Mutual Fund";
+			} else if(individualSecurityInfo.quoteType == "EQUITY"){
+				current.type = "Stock";
+			} else {
+				current.type = "Other";
+			}
+		}
+		
+		// Check if the individual security info has a symbol property
+		if(individualSecurityInfo.hasOwnProperty('symbol')){
+			
+			// If property exist, update the symbol on the current record based on value
+			current.symbol = individualSecurityInfo.symbol;	
+		}
+	}
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-12 18:10:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0c84bed32f83301036b3d6c6f699b6fe</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Extract Symbol and Type for Local DB</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_script_0c84bed32f83301036b3d6c6f699b6fe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-12 20:39:19</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=0c84bed32f83301036b3d6c6f699b6fe"/>
+</record_update>

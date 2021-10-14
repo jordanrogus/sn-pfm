@@ -14,16 +14,16 @@ pfmClientCallableUtils.prototype = Object.extendsObject(global.AbstractAjaxProce
 	 * Return to the client information related to the passed in security
 	 *
 	 * Revision History
-	 * JR - 10/11/2021 - Initial Script Creation
+	 * JR - 10/12/2021 - Initial Script Creation
 	*/
-	getSymbolInformation: function(){
+	getFinancialSecurityInfo: function(){
 		
 		// Retrieve inputted symbol
 		var symbol = this.getParameter('sysparm_symbol');		
 		
 		// Call function to retrieve information from Yahoo Financials
 		var pfmUtils = new x_708650_pfm.pfmUtils;
-		var symbolInformation = pfmUtils.getFinancialSecurityDetails(symbol);
+		var symbolInformation = pfmUtils.getFinancialSecurityInfoFromYahooFinancials(symbol);
 				
 		// Return information retrieved
 		return symbolInformation;
@@ -36,13 +36,13 @@ pfmClientCallableUtils.prototype = Object.extendsObject(global.AbstractAjaxProce
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-11 20:06:04</sys_created_on>
         <sys_id>e695c6cb2f47301036b3d6c6f699b6ef</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>pfmClientCallableUtils</sys_name>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_include_e695c6cb2f47301036b3d6c6f699b6ef</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-11 21:28:41</sys_updated_on>
+        <sys_updated_on>2021-10-12 17:10:34</sys_updated_on>
     </sys_script_include>
 </record_update>
