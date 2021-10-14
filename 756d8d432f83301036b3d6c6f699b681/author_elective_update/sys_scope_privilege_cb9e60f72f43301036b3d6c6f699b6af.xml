@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>read</operation>
+        <source_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-13 21:41:07</sys_created_on>
+        <sys_id>cb9e60f72f43301036b3d6c6f699b6af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>incident</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_scope_privilege_cb9e60f72f43301036b3d6c6f699b6af</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-13 21:41:07</sys_updated_on>
+        <target_name>incident</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>9b6a549a6f4bd6001a75a9cc5d3ee454</instance_id>
+        <instance_name>dev22865</instance_name>
+        <name>sys_scope_privilege_cb9e60f72f43301036b3d6c6f699b6af</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>read</operation><source_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-13 21:41:07</sys_created_on><sys_id>cb9e60f72f43301036b3d6c6f699b6af</sys_id><sys_mod_count>0</sys_mod_count><sys_name>incident</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_scope_privilege_cb9e60f72f43301036b3d6c6f699b6af</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-13 21:41:07</sys_updated_on><target_name>incident</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>1059277219</payload_hash>
+        <record_name>incident</record_name>
+        <reverted_from/>
+        <source>d4d099472f83301036b3d6c6f699b65c</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-13 21:41:08</sys_created_on>
+        <sys_id>439e60f72f43301036b3d6c6f699b6b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c7b9a15730000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-13 21:41:08</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>8b9e60f7ca433010db5db0e2828712b1</update_guid>
+        <update_guid_history>8b9e60f7ca433010db5db0e2828712b1:1059277219</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-13 21:41:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>8fc93f662c524a8aa2534c7b09311bc4</sys_id>
+        <sys_metadata>cb9e60f72f43301036b3d6c6f699b6af</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>incident</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_cb9e60f72f43301036b3d6c6f699b6af</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_cb9e60f72f43301036b3d6c6f699b6af">439e60f72f43301036b3d6c6f699b6b2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-13 21:41:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

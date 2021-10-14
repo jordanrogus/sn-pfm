@@ -219,6 +219,35 @@ pfmUtils.prototype = {
 		var jsonString = JSON.stringify(obj);
 		return jsonString;
 	},
+	
+	/*
+	 * Either retrieve or create a financial profile
+	 *
+	 * Revision History
+	 * JR - 10/14/2021 - Initial Script Creation
+	*/
+	retrieveFinancialProfile: function(user){
+		
+		// Check if the passed in user has a financial profile
+		var grFinancialProfile = new GlideRecord("x_708650_pfm_financial_profile");
+		grFinancialProfile.addQuery("user", user);
+		grFinancialProfile.query();
+		if (grFinancialProfile.next()) {
+			
+			// If so return sys_id of user
+			return grFinancialProfile.getUniqueValue();
+
+		// If user does not have a financial profile, create one
+		} else {
+			
+			grFinancialProfile.initialize();
+			grFinancialProfile.user = current.user;
+			var fpRecord = grFinancialProfile.insert();
+			
+			// return sys_id of user 
+			return fpRecord;
+		}
+	},
 
     type: 'pfmUtils'
 };]]></script>
@@ -226,13 +255,13 @@ pfmUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-11 20:10:10</sys_created_on>
         <sys_id>2596460f2f47301036b3d6c6f699b648</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>pfmUtils</sys_name>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_include_2596460f2f47301036b3d6c6f699b648</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-13 20:59:27</sys_updated_on>
+        <sys_updated_on>2021-10-14 22:06:47</sys_updated_on>
     </sys_script_include>
 </record_update>

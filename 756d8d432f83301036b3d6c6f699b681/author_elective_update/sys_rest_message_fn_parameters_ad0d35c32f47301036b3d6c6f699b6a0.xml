@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="DELETE">
+        <name>lang</name>
+        <rest_message_function display_value="GET Quote">ebfb75832f47301036b3d6c6f699b6e3</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 19:28:17</sys_created_on>
+        <sys_id>ad0d35c32f47301036b3d6c6f699b6a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>lang</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_ad0d35c32f47301036b3d6c6f699b6a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 19:28:25</sys_updated_on>
+        <type>string</type>
+        <value>en</value>
+    </sys_rest_message_fn_parameters>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>9b6a549a6f4bd6001a75a9cc5d3ee454</instance_id>
+        <instance_name>dev22865</instance_name>
+        <name>sys_rest_message_fn_parameters_ad0d35c32f47301036b3d6c6f699b6a0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters"><sys_rest_message_fn_parameters action="INSERT_OR_UPDATE"><name>lang</name><rest_message_function display_value="GET Quote">ebfb75832f47301036b3d6c6f699b6e3</rest_message_function><sys_class_name>sys_rest_message_fn_parameters</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-11 19:28:17</sys_created_on><sys_id>ad0d35c32f47301036b3d6c6f699b6a0</sys_id><sys_mod_count>1</sys_mod_count><sys_name>lang</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_rest_message_fn_parameters_ad0d35c32f47301036b3d6c6f699b6a0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-11 19:28:25</sys_updated_on><type>string</type><value>en</value></sys_rest_message_fn_parameters></record_update>]]></payload>
+        <payload_hash>138667521</payload_hash>
+        <record_name>lang</record_name>
+        <reverted_from/>
+        <source>d4d099472f83301036b3d6c6f699b65c</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 19:28:25</sys_created_on>
+        <sys_id>530df1832f47301036b3d6c6f699b60c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c70d3dbed0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 19:28:25</sys_updated_on>
+        <type>Variable Substitutions</type>
+        <update_guid>9b0df1832c473010fc5980ed4daf4e0b</update_guid>
+        <update_guid_history>9b0df1832c473010fc5980ed4daf4e0b:138667521,6d0d35c3e14730107249f9f0453a70a1:-1603632301</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 19:44:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn_parameters">sys_rest_message_fn_parameters</sys_db_object>
+        <sys_id>079a5021475041c0839f07a88882a840</sys_id>
+        <sys_metadata>ad0d35c32f47301036b3d6c6f699b6a0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>lang</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent display_value="GET Quote">ebfb75832f47301036b3d6c6f699b6e3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_parameters_ad0d35c32f47301036b3d6c6f699b6a0</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_parameters_ad0d35c32f47301036b3d6c6f699b6a0">530df1832f47301036b3d6c6f699b60c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 19:44:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

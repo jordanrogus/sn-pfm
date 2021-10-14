@@ -6,19 +6,19 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_708650_pfm_portfolio</collection>
+        <collection>x_708650_pfm_financial_profile</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Ensure One Portfolio per User</name>
+        <name>Ensure One Profile per User</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -28,34 +28,33 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[/*
- * Script ensures that at maximum only 1 record in the portfolio (x_708650_pfm_portfolio) table exists per user
+ * Script ensures that at maximum only 1 record in the financial profile (x_708650_pfm_financial_profile) table exists per user
  *
  * Revision History
- * JR - 10/11/2021 - Initial Script Creation
- * JR - 10/13/2021 - Inactivated script as users should have ability to create multipl portfolios
+ * JR - 10/14/2021 - Initial Script Creation
 */
 
 (function executeRule(current, previous /*null when async*/) {
 	
 	// Initialize variables
 	var exisitingRecord = "";
-	var portfolioUrl = "";
+	var profileUrl = "";
 	var link = "";
 
 	// Check if an exisiting portfolio exists for the logged-in user
-	var grPortfolio = new GlideRecord("x_708650_pfm_portfolio");
-	grPortfolio.addQuery('user', gs.getUserID());
-	grPortfolio.query();
-	if(grPortfolio.next() && grPortfolio.sys_id != current.sys_id){
+	var grProfile = new GlideRecord("x_708650_pfm_financial_profile");
+	grProfile.addQuery('user', gs.getUserID());
+	grProfile.query();
+	if(grProfile.next() && grProfile.sys_id != current.sys_id){
 		
 		// If a portfolio exists, create a URL to link to the exisiting record
-		exisitingRecord = grPortfolio.getUniqueValue();
+		exisitingRecord = grProfile.getUniqueValue();
 		
-		portfolioUrl = "/x_708650_pfm_portfolio?sys_id=" + exisitingRecord;
-		link = '<a href="' + portfolioUrl + '">here</a>';
+		profileUrl = "/x_708650_pfm_financial_profile?sys_id=" + exisitingRecord;
+		link = '<a href="' + profileUrl + '">here</a>';
 		
 		// Add error message with link to the exisiting record
-		var message = gs.getMessage('A portfolio already exists for this user. Please click ') + link + gs.getMessage(' to access the exisiting portfolio.');
+		var message = gs.getMessage('A profile already exists for this user. Please click ') + link + gs.getMessage(' to access the exisiting profile.');
 		
 		gs.addErrorMessage(message);
 		
@@ -70,15 +69,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1604618b2fc3301036b3d6c6f699b64d</sys_id>
-        <sys_mod_count>20</sys_mod_count>
-        <sys_name>Ensure One Portfolio per User</sys_name>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Ensure One Profile per User</sys_name>
         <sys_overrides/>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
         <sys_policy/>
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_script_1604618b2fc3301036b3d6c6f699b64d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-13 20:33:57</sys_updated_on>
+        <sys_updated_on>2021-10-14 21:16:05</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

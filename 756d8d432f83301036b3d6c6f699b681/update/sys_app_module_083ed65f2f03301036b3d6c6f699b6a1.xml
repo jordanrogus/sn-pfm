@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="PFM - Investments">0f6e09072f83301036b3d6c6f699b692</application>
+        <application display_value="PFM - Development">000fed402f57301036b3d6c6f699b66f</application>
         <assessment/>
         <device_type/>
         <filter table="syslog_app_scope">sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^EQ<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Today@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()"/>
@@ -15,7 +15,7 @@
         <mobile_title>App Log</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>syslog_app_scope</name>
-        <order>10400</order>
+        <order>100</order>
         <override_menu_roles>false</override_menu_roles>
         <query>sysparm_fixed_query=sys_scope=756d8d432f83301036b3d6c6f699b681</query>
         <report/>
@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>083ed65f2f03301036b3d6c6f699b6a1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>App Log</sys_name>
         <sys_overrides/>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_app_module_083ed65f2f03301036b3d6c6f699b6a1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-13 21:27:51</sys_updated_on>
+        <sys_updated_on>2021-10-14 21:01:30</sys_updated_on>
         <timeline_page/>
         <title>App Log</title>
         <uncancelable>false</uncancelable>
