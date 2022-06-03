@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template">
+    <sys_ux_composite_data_template action="DELETE">
+        <active>true</active>
+        <name>Item produced template</name>
+        <sys_class_name>sys_ux_composite_data_template</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:35</sys_created_on>
+        <sys_id>d76f6fa694f741102005ad7c55ca7310</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Item produced template</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_d76f6fa694f741102005ad7c55ca7310</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:35</sys_updated_on>
+        <template>{&#13;
+	"component": "now-card-evam-record",&#13;
+	"staticValues": {&#13;
+		"highlightedHeaderIcon": {&#13;
+            "translatable": false,&#13;
+            "key": "clock-outline"&#13;
+        },&#13;
+        "highlightedHeaderBkgColor": {&#13;
+            "translatable": false,&#13;
+            "key": "positive"&#13;
+        },&#13;
+        "detailLabelOne": {&#13;
+            "translatable": true,&#13;
+            "key": "State"&#13;
+        },&#13;
+        "detailLabelTwo": {&#13;
+            "translatable": true,&#13;
+            "key": "Number"&#13;
+        }&#13;
+	},&#13;
+	"mappings": {&#13;
+		"highlightedHeaderLabel": "due_date",&#13;
+        "titleLabel": "short_description",&#13;
+        "detailValueOne": "state",&#13;
+        "detailValueTwo": "number" &#13;
+	},&#13;
+	"actionMappings": {&#13;
+		"clickAction": "navigation"&#13;
+	}&#13;
+}</template>
+    </sys_ux_composite_data_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_composite_data_template_d76f6fa694f741102005ad7c55ca7310</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template"><sys_ux_composite_data_template action="INSERT_OR_UPDATE"><active>true</active><name>Item produced template</name><sys_class_name>sys_ux_composite_data_template</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:35</sys_created_on><sys_id>d76f6fa694f741102005ad7c55ca7310</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Item produced template</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_composite_data_template_d76f6fa694f741102005ad7c55ca7310</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:35</sys_updated_on><template>{&#13;
+	"component": "now-card-evam-record",&#13;
+	"staticValues": {&#13;
+		"highlightedHeaderIcon": {&#13;
+            "translatable": false,&#13;
+            "key": "clock-outline"&#13;
+        },&#13;
+        "highlightedHeaderBkgColor": {&#13;
+            "translatable": false,&#13;
+            "key": "positive"&#13;
+        },&#13;
+        "detailLabelOne": {&#13;
+            "translatable": true,&#13;
+            "key": "State"&#13;
+        },&#13;
+        "detailLabelTwo": {&#13;
+            "translatable": true,&#13;
+            "key": "Number"&#13;
+        }&#13;
+	},&#13;
+	"mappings": {&#13;
+		"highlightedHeaderLabel": "due_date",&#13;
+        "titleLabel": "short_description",&#13;
+        "detailValueOne": "state",&#13;
+        "detailValueTwo": "number" &#13;
+	},&#13;
+	"actionMappings": {&#13;
+		"clickAction": "navigation"&#13;
+	}&#13;
+}</template></sys_ux_composite_data_template></record_update>]]></payload>
+        <payload_hash>-1526503378</payload_hash>
+        <record_name>Item produced template</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>0752ecfe2fbb41107d282e5df699b66b</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>View Template</type>
+        <update_guid>c352ecfe04bb4110f3e2ea08791bc56b</update_guid>
+        <update_guid_history>c352ecfe04bb4110f3e2ea08791bc56b:-1526503378</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_composite_data_template">sys_ux_composite_data_template</sys_db_object>
+        <sys_id>083b90305d7741e3806a5a1a635b7461</sys_id>
+        <sys_metadata>d76f6fa694f741102005ad7c55ca7310</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Item produced template</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_composite_data_template_d76f6fa694f741102005ad7c55ca7310</sys_update_name>
+        <sys_update_version display_value="sys_ux_composite_data_template_d76f6fa694f741102005ad7c55ca7310">0752ecfe2fbb41107d282e5df699b66b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

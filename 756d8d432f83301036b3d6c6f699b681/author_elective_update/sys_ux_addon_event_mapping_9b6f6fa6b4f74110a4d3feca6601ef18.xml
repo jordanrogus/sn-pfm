@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="DELETE">
+        <active>true</active>
+        <description/>
+        <name>Request Navigation</name>
+        <parent_macroponent/>
+        <source_da display_value="navigation">d46f400473211010c342d5fdbdf6a7cf</source_da>
+        <source_element_id>data_row_2</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9b6f6fa6b4f74110a4d3feca6601ef18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Navigation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_9b6f6fa6b4f74110a4d3feca6601ef18</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:28</sys_updated_on>
+        <target_event display_value="My request">d76f6fa6f3f7411026e785f011ffc018</target_event>
+        <target_payload_mapping>{
+  "type": "MAP_CONTAINER",
+  "container": {
+    "sysId": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "sysId"
+        ]
+      }
+    },
+    "table": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "table"
+        ]
+      }
+    }
+  }
+}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_addon_event_mapping_9b6f6fa6b4f74110a4d3feca6601ef18</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping"><sys_ux_addon_event_mapping action="INSERT_OR_UPDATE"><active>true</active><description/><name>Request Navigation</name><parent_macroponent/><source_da display_value="navigation">d46f400473211010c342d5fdbdf6a7cf</source_da><source_element_id>data_row_2</source_element_id><sys_class_name>sys_ux_addon_event_mapping</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:28</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9b6f6fa6b4f74110a4d3feca6601ef18</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Request Navigation</sys_name><sys_overrides/><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_addon_event_mapping_9b6f6fa6b4f74110a4d3feca6601ef18</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:28</sys_updated_on><target_event display_value="My request">d76f6fa6f3f7411026e785f011ffc018</target_event><target_payload_mapping>{
+  "type": "MAP_CONTAINER",
+  "container": {
+    "sysId": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "sysId"
+        ]
+      }
+    },
+    "table": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "table"
+        ]
+      }
+    }
+  }
+}</target_payload_mapping></sys_ux_addon_event_mapping></record_update>]]></payload>
+        <payload_hash>-1512861563</payload_hash>
+        <record_name>Request Navigation</record_name>
+        <reverted_from/>
+        <source>5cdbafa22ff741107d282e5df699b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:27</sys_created_on>
+        <sys_id>1d02e0fe2fbb41107d282e5df699b62a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1812b67bd490000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:27</sys_updated_on>
+        <type>UX Add-on Event Mapping</type>
+        <update_guid>d902e0fe6fbb41103c699dbca877de2a</update_guid>
+        <update_guid_history>d902e0fe6fbb41103c699dbca877de2a:-1512861563</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_addon_event_mapping">sys_ux_addon_event_mapping</sys_db_object>
+        <sys_id>0125c787fdcd4f9480a46b6de64cc184</sys_id>
+        <sys_metadata>9b6f6fa6b4f74110a4d3feca6601ef18</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Navigation</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_addon_event_mapping_9b6f6fa6b4f74110a4d3feca6601ef18</sys_update_name>
+        <sys_update_version display_value="sys_ux_addon_event_mapping_9b6f6fa6b4f74110a4d3feca6601ef18">1d02e0fe2fbb41107d282e5df699b62a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

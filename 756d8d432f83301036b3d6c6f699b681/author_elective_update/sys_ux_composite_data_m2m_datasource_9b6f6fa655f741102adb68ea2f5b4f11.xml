@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_datasource">
+    <sys_ux_composite_data_m2m_datasource action="DELETE">
+        <dataset/>
+        <datasource display_value="My Request - Incident datasource">db6f6fa6d5f74110b26e1de7ce6d7e11</datasource>
+        <sys_class_name>sys_ux_composite_data_m2m_datasource</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:36</sys_created_on>
+        <sys_id>9b6f6fa655f741102adb68ea2f5b4f11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_composite_data_m2m_datasource_9b6f6fa655f741102adb68ea2f5b4f11</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:36</sys_updated_on>
+    </sys_ux_composite_data_m2m_datasource>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_composite_data_m2m_datasource_9b6f6fa655f741102adb68ea2f5b4f11</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_datasource"><sys_ux_composite_data_m2m_datasource action="INSERT_OR_UPDATE"><dataset/><datasource display_value="My Request - Incident datasource">db6f6fa6d5f74110b26e1de7ce6d7e11</datasource><sys_class_name>sys_ux_composite_data_m2m_datasource</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:36</sys_created_on><sys_id>9b6f6fa655f741102adb68ea2f5b4f11</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_composite_data_m2m_datasource_9b6f6fa655f741102adb68ea2f5b4f11</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:36</sys_updated_on></sys_ux_composite_data_m2m_datasource></record_update>]]></payload>
+        <payload_hash>1656501924</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>5cdbafa22ff741107d282e5df699b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:19</sys_created_on>
+        <sys_id>dbf160fe2fbb41107d282e5df699b69f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1812b679b2d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:19</sys_updated_on>
+        <type>EVAM Datasource M2M</type>
+        <update_guid>9bf160feb6bb4110ad699e39b8f2ee9f</update_guid>
+        <update_guid_history>9bf160feb6bb4110ad699e39b8f2ee9f:1656501924</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_composite_data_m2m_datasource">sys_ux_composite_data_m2m_datasource</sys_db_object>
+        <sys_id>6cdcf2f8217d4df0ad84c0592330f790</sys_id>
+        <sys_metadata>9b6f6fa655f741102adb68ea2f5b4f11</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_composite_data_m2m_datasource_9b6f6fa655f741102adb68ea2f5b4f11</sys_update_name>
+        <sys_update_version display_value="sys_ux_composite_data_m2m_datasource_9b6f6fa655f741102adb68ea2f5b4f11">dbf160fe2fbb41107d282e5df699b69f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

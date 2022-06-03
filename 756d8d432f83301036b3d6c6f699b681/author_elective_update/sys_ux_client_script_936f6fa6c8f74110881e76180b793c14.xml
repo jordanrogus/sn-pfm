@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Article page">936f6fa67ef7411016d1507f04814e15</macroponent>
+        <name>Create knowledge feedback</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[function handler({
+    api,
+    helpers,
+    event,
+    imports
+}) {
+    const {
+        context,
+        data,
+        state,
+        setState,
+        emit
+    } = api;
+    const {
+        modal
+    } = helpers;
+    const insertRecord = function(table, fields, type) {
+        setState("currentFeedbackAction", type);
+        data.create_record_1.execute({
+            table,
+            templateFields: fields,
+            useSetDisplayValue: ''
+        });
+    };
+    var articleSysId = context.props.sysId;
+    var templateFields = "article=" + articleSysId + "^";
+    var articleData = data.get_article_details_1.articleDetails;
+    var yesMessage = "Thank you for your feedback";
+    var noMessage = "We'll improve the article based on your feedback.";
+    const feedbackAction = state.currentFeedbackAction;
+
+    if (event.elementId == "kb_star_rating") {
+        setState('currentFeedbackAction', "rating");
+        templateFields += "rating=" + event.payload.rating;
+        if (articleData.enableActionableFeedbackForRating >= event.payload.rating) {
+            setState('userRating', event.payload.rating);
+            modal.open("[component-id$='custom_1']");
+        } else {
+            insertRecord('kb_feedback', templateFields, "rating");
+        }
+    }
+
+    if (event.elementId == "boolean_feedback_no") {
+        var showModal = (articleData.showFeedbackOptions || articleData.showFeedbackComments) && articleData.enableActionableFeedbackForHelpful;
+        setState("currentFeedbackAction", "boolean_feedback");
+        if (showModal) {
+            setState('additionalDetails', null);
+            setState("selectedReason", ["4"]);
+            modal.open("[component-id$='custom_1']");
+        } else {
+            templateFields += "useful=no";
+            setState('booleanFeedbackMessage', noMessage);
+            setState('booleanFeedbackIcon', 'thumbs-down-outline');
+            setState("isBooleanFeedbackButtonsHidden", true);
+            insertRecord('kb_feedback', templateFields, "boolean_feedback");
+        }
+    } else if (event.elementId == "boolean_feedback_yes") {
+        setState("currentFeedbackAction", "boolean_feedback");
+        templateFields += "useful=yes";
+        setState('booleanFeedbackMessage', yesMessage);
+        setState('booleanFeedbackIcon', 'thumbs-up-outline');
+        setState("isBooleanFeedbackButtonsHidden", true);
+        insertRecord('kb_feedback', templateFields, "boolean_feedback");
+        const usefulYesCount = articleData.usefulYesCount+1;
+        const totalUsefulCount = articleData.totalUsefulCount+1;
+        var helpPercent = (usefulYesCount && totalUsefulCount) ? 
+            Math.round(usefulYesCount / totalUsefulCount *100) : 0;
+        const helpPercentMessage = (helpPercent) ? helpPercent+'% found this helpful':'';
+        setState('helpPercentMessage',helpPercentMessage);
+        setState('isHelpPercentInfoHidden', false);
+    } else if (event.elementId == "boolean_feedback_no_ignore") {
+
+        modal.close("[component-id$='custom_1']");
+        if (feedbackAction != "rating") {
+            setState('booleanFeedbackMessage', noMessage);
+            setState('booleanFeedbackIcon', 'thumbs-down-outline');
+            setState("isBooleanFeedbackButtonsHidden", true);
+            templateFields += "reason=4^useful=no";
+        }
+        if (feedbackAction == "rating") {
+            templateFields += "reason=4^rating=" + state.userRating;
+        }
+        insertRecord('kb_feedback', templateFields,feedbackAction);
+
+    } else if (event.elementId == "boolean_feedback_no_submit") {
+        modal.close("[component-id$='custom_1']");
+        if ((state.selectedReason)[0] != null)
+            templateFields += "reason=" + (state.selectedReason)[0] + "^";
+        if (state.additionalDetails != null)
+            templateFields += "comments=" + state.additionalDetails + "^";
+        if (feedbackAction != "rating") {
+            setState('booleanFeedbackMessage', noMessage);
+            setState('booleanFeedbackIcon', 'thumbs-down-outline');
+            setState("isBooleanFeedbackButtonsHidden", true);
+            templateFields += "useful=no";
+        }
+        if (feedbackAction == "rating") {
+            templateFields += "rating=" + state.userRating;
+        }
+        insertRecord('kb_feedback', templateFields,feedbackAction);
+    } else if (event.elementId == "flag_article") {
+        modal.close("[component-id$='custom_2']");
+        var comments = state.flagArticleContent.replaceAll("\n", "\\n").replaceAll("^", "&#94;");
+        templateFields += "flagged=true^comments=" + comments;
+        setState('flagArticleContent', comments);
+        if (articleData.enableActionableFeedbackForFlag)
+            templateFields += "^reason=Flagged";
+        insertRecord('kb_feedback', templateFields, "flag_article");
+    }
+
+    if (event.elementId == "create_record_1") {
+        var items = [];
+        var requestFailed = false;
+		
+        if (event.name == "DATA_OP_SUCCEEDED") {
+            var output = event.payload.data.output.data.GlideRecord_Mutation.insert_kb_feedback;
+            if (output == null) {
+                requestFailed = true;
+            } else {
+                if (state.currentFeedbackAction == "flag_article") {
+                    items.push({
+                        id: "flagArticleSuccess",
+                        status: "info",
+                        icon: "info-circle-outline",
+                        content: "Article has been flagged",
+                        action: {
+                            type: "dismiss"
+                        }
+                    });
+                }
+                if (state.currentFeedbackAction == "rating") {
+                    items.push({
+                        id: "ratingArticleSuccess",
+                        status: "info",
+                        icon: "info-circle-outline",
+                        content: "Feedback submitted.",
+                        action: {
+                            type: "dismiss"
+                        }
+                    });
+                }
+
+                if (state.currentFeedbackAction == "boolean_feedback") {
+                    items.push({
+                        id: "booleanFeedbackSuccess",
+                        status: "info",
+                        icon: "info-circle-outline",
+                        content: "Feedback submitted.",
+                        action: {
+                            type: "dismiss"
+                        }
+                    });
+                }
+            }
+        }
+        
+        if (event.name == "DATA_OP_FAILED" || requestFailed) {
+            items.push({
+                id: "flagArticleFailure",
+                status: "critical",
+                icon: "info-circle-outline",
+                content: "You have reached the daily limit for feedback posted by a user.",
+                action: {
+                    type: "dismiss"
+                }
+            });
+        }
+        if (items.length > 0) {
+            emit("NOW_UXF_PAGE#ADD_NOTIFICATIONS", {
+                items
+            });
+        }
+        setState('currentFeedbackAction', "");
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:36</sys_created_on>
+        <sys_id>936f6fa6c8f74110881e76180b793c14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create knowledge feedback</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_client_script_936f6fa6c8f74110881e76180b793c14</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:36</sys_updated_on>
+        <type/>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_client_script_936f6fa6c8f74110881e76180b793c14</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Article page"&gt;936f6fa67ef7411016d1507f04814e15&lt;/macroponent&gt;&lt;name&gt;Create knowledge feedback&lt;/name&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function handler({
+    api,
+    helpers,
+    event,
+    imports
+}) {
+    const {
+        context,
+        data,
+        state,
+        setState,
+        emit
+    } = api;
+    const {
+        modal
+    } = helpers;
+    const insertRecord = function(table, fields, type) {
+        setState("currentFeedbackAction", type);
+        data.create_record_1.execute({
+            table,
+            templateFields: fields,
+            useSetDisplayValue: ''
+        });
+    };
+    var articleSysId = context.props.sysId;
+    var templateFields = "article=" + articleSysId + "^";
+    var articleData = data.get_article_details_1.articleDetails;
+    var yesMessage = "Thank you for your feedback";
+    var noMessage = "We'll improve the article based on your feedback.";
+    const feedbackAction = state.currentFeedbackAction;
+
+    if (event.elementId == "kb_star_rating") {
+        setState('currentFeedbackAction', "rating");
+        templateFields += "rating=" + event.payload.rating;
+        if (articleData.enableActionableFeedbackForRating &gt;= event.payload.rating) {
+            setState('userRating', event.payload.rating);
+            modal.open("[component-id$='custom_1']");
+        } else {
+            insertRecord('kb_feedback', templateFields, "rating");
+        }
+    }
+
+    if (event.elementId == "boolean_feedback_no") {
+        var showModal = (articleData.showFeedbackOptions || articleData.showFeedbackComments) &amp;&amp; articleData.enableActionableFeedbackForHelpful;
+        setState("currentFeedbackAction", "boolean_feedback");
+        if (showModal) {
+            setState('additionalDetails', null);
+            setState("selectedReason", ["4"]);
+            modal.open("[component-id$='custom_1']");
+        } else {
+            templateFields += "useful=no";
+            setState('booleanFeedbackMessage', noMessage);
+            setState('booleanFeedbackIcon', 'thumbs-down-outline');
+            setState("isBooleanFeedbackButtonsHidden", true);
+            insertRecord('kb_feedback', templateFields, "boolean_feedback");
+        }
+    } else if (event.elementId == "boolean_feedback_yes") {
+        setState("currentFeedbackAction", "boolean_feedback");
+        templateFields += "useful=yes";
+        setState('booleanFeedbackMessage', yesMessage);
+        setState('booleanFeedbackIcon', 'thumbs-up-outline');
+        setState("isBooleanFeedbackButtonsHidden", true);
+        insertRecord('kb_feedback', templateFields, "boolean_feedback");
+        const usefulYesCount = articleData.usefulYesCount+1;
+        const totalUsefulCount = articleData.totalUsefulCount+1;
+        var helpPercent = (usefulYesCount &amp;&amp; totalUsefulCount) ? 
+            Math.round(usefulYesCount / totalUsefulCount *100) : 0;
+        const helpPercentMessage = (helpPercent) ? helpPercent+'% found this helpful':'';
+        setState('helpPercentMessage',helpPercentMessage);
+        setState('isHelpPercentInfoHidden', false);
+    } else if (event.elementId == "boolean_feedback_no_ignore") {
+
+        modal.close("[component-id$='custom_1']");
+        if (feedbackAction != "rating") {
+            setState('booleanFeedbackMessage', noMessage);
+            setState('booleanFeedbackIcon', 'thumbs-down-outline');
+            setState("isBooleanFeedbackButtonsHidden", true);
+            templateFields += "reason=4^useful=no";
+        }
+        if (feedbackAction == "rating") {
+            templateFields += "reason=4^rating=" + state.userRating;
+        }
+        insertRecord('kb_feedback', templateFields,feedbackAction);
+
+    } else if (event.elementId == "boolean_feedback_no_submit") {
+        modal.close("[component-id$='custom_1']");
+        if ((state.selectedReason)[0] != null)
+            templateFields += "reason=" + (state.selectedReason)[0] + "^";
+        if (state.additionalDetails != null)
+            templateFields += "comments=" + state.additionalDetails + "^";
+        if (feedbackAction != "rating") {
+            setState('booleanFeedbackMessage', noMessage);
+            setState('booleanFeedbackIcon', 'thumbs-down-outline');
+            setState("isBooleanFeedbackButtonsHidden", true);
+            templateFields += "useful=no";
+        }
+        if (feedbackAction == "rating") {
+            templateFields += "rating=" + state.userRating;
+        }
+        insertRecord('kb_feedback', templateFields,feedbackAction);
+    } else if (event.elementId == "flag_article") {
+        modal.close("[component-id$='custom_2']");
+        var comments = state.flagArticleContent.replaceAll("\n", "\\n").replaceAll("^", "&amp;#94;");
+        templateFields += "flagged=true^comments=" + comments;
+        setState('flagArticleContent', comments);
+        if (articleData.enableActionableFeedbackForFlag)
+            templateFields += "^reason=Flagged";
+        insertRecord('kb_feedback', templateFields, "flag_article");
+    }
+
+    if (event.elementId == "create_record_1") {
+        var items = [];
+        var requestFailed = false;
+		
+        if (event.name == "DATA_OP_SUCCEEDED") {
+            var output = event.payload.data.output.data.GlideRecord_Mutation.insert_kb_feedback;
+            if (output == null) {
+                requestFailed = true;
+            } else {
+                if (state.currentFeedbackAction == "flag_article") {
+                    items.push({
+                        id: "flagArticleSuccess",
+                        status: "info",
+                        icon: "info-circle-outline",
+                        content: "Article has been flagged",
+                        action: {
+                            type: "dismiss"
+                        }
+                    });
+                }
+                if (state.currentFeedbackAction == "rating") {
+                    items.push({
+                        id: "ratingArticleSuccess",
+                        status: "info",
+                        icon: "info-circle-outline",
+                        content: "Feedback submitted.",
+                        action: {
+                            type: "dismiss"
+                        }
+                    });
+                }
+
+                if (state.currentFeedbackAction == "boolean_feedback") {
+                    items.push({
+                        id: "booleanFeedbackSuccess",
+                        status: "info",
+                        icon: "info-circle-outline",
+                        content: "Feedback submitted.",
+                        action: {
+                            type: "dismiss"
+                        }
+                    });
+                }
+            }
+        }
+        
+        if (event.name == "DATA_OP_FAILED" || requestFailed) {
+            items.push({
+                id: "flagArticleFailure",
+                status: "critical",
+                icon: "info-circle-outline",
+                content: "You have reached the daily limit for feedback posted by a user.",
+                action: {
+                    type: "dismiss"
+                }
+            });
+        }
+        if (items.length &gt; 0) {
+            emit("NOW_UXF_PAGE#ADD_NOTIFICATIONS", {
+                items
+            });
+        }
+        setState('currentFeedbackAction', "");
+    }
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-06-03 17:29:36&lt;/sys_created_on&gt;&lt;sys_id&gt;936f6fa6c8f74110881e76180b793c14&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Create knowledge feedback&lt;/sys_name&gt;&lt;sys_package display_value="PFM" source="x_708650_pfm"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PFM"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_936f6fa6c8f74110881e76180b793c14&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-03 17:29:36&lt;/sys_updated_on&gt;&lt;type/&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1700943962</payload_hash>
+        <record_name>Create knowledge feedback</record_name>
+        <reverted_from/>
+        <source>5cdbafa22ff741107d282e5df699b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:08</sys_created_on>
+        <sys_id>e8f1ecbe2fbb41107d282e5df699b6f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1812b6770da0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:08</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>64f1ecbe3fbb4110a73dba0cf96de0f1</update_guid>
+        <update_guid_history>64f1ecbe3fbb4110a73dba0cf96de0f1:-1700943962</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>8e7973da2ea34b81aca70c1243ea4c39</sys_id>
+        <sys_metadata>936f6fa6c8f74110881e76180b793c14</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create knowledge feedback</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_936f6fa6c8f74110881e76180b793c14</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_936f6fa6c8f74110881e76180b793c14">e8f1ecbe2fbb41107d282e5df699b6f1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate">
+    <sys_ux_composite_data_template_predicate action="DELETE">
+        <active>true</active>
+        <condition table="sysapproval_approver">approverDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state=requested^EQ<item endquery="false" field="approver" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item display_value="Requested" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="requested"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <custom_condition/>
+        <custom_field_list/>
+        <field_list>due_date,sysapproval.short_description,sysapproval.number,sys_created_on</field_list>
+        <name>My Tasks</name>
+        <order/>
+        <predicate_bundle display_value="My Tasks - Task bundle">176f6fa6d9f74110db2b699293cd1810</predicate_bundle>
+        <required_roles/>
+        <sys_class_name>sys_ux_composite_data_template_predicate</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:32</sys_created_on>
+        <sys_id>136f6fa697f74110395ec57cba986210</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Tasks</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_136f6fa697f74110395ec57cba986210</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:32</sys_updated_on>
+        <table>sysapproval_approver</table>
+        <ux_template display_value="Custom Portal Landing - My Tasks template">9f6f6fa61df741105be73d06fec6180f</ux_template>
+    </sys_ux_composite_data_template_predicate>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_composite_data_template_predicate_136f6fa697f74110395ec57cba986210</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate"><sys_ux_composite_data_template_predicate action="INSERT_OR_UPDATE"><active>true</active><condition table="sysapproval_approver">approverDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state=requested^EQ<item endquery="false" field="approver" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/><item display_value="Requested" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="requested"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></condition><custom_condition/><custom_field_list/><field_list>due_date,sysapproval.short_description,sysapproval.number,sys_created_on</field_list><name>My Tasks</name><order/><predicate_bundle display_value="My Tasks - Task bundle">176f6fa6d9f74110db2b699293cd1810</predicate_bundle><required_roles/><sys_class_name>sys_ux_composite_data_template_predicate</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:32</sys_created_on><sys_id>136f6fa697f74110395ec57cba986210</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Tasks</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_composite_data_template_predicate_136f6fa697f74110395ec57cba986210</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:32</sys_updated_on><table>sysapproval_approver</table><ux_template display_value="Custom Portal Landing - My Tasks template">9f6f6fa61df741105be73d06fec6180f</ux_template></sys_ux_composite_data_template_predicate></record_update>]]></payload>
+        <payload_hash>-1574726130</payload_hash>
+        <record_name>My Tasks</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>c9f120fe2fbb41107d282e5df699b612</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>EVAM View Config</type>
+        <update_guid>89f120fec4bb411019b65f4157f7b412</update_guid>
+        <update_guid_history>89f120fec4bb411019b65f4157f7b412:-1574726130</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_composite_data_template_predicate">sys_ux_composite_data_template_predicate</sys_db_object>
+        <sys_id>96b0bcca000f4d309d1033f6ba8c3690</sys_id>
+        <sys_metadata>136f6fa697f74110395ec57cba986210</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Tasks</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_composite_data_template_predicate_136f6fa697f74110395ec57cba986210</sys_update_name>
+        <sys_update_version display_value="sys_ux_composite_data_template_predicate_136f6fa697f74110395ec57cba986210">c9f120fe2fbb41107d282e5df699b612</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

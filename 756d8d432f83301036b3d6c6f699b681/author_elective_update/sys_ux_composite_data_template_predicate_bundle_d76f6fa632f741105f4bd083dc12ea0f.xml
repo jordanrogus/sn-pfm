@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate_bundle">
+    <sys_ux_composite_data_template_predicate_bundle action="DELETE">
+        <active>true</active>
+        <name>My Requests (task) bundle</name>
+        <sys_class_name>sys_ux_composite_data_template_predicate_bundle</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:37</sys_created_on>
+        <sys_id>d76f6fa632f741105f4bd083dc12ea0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests (task) bundle</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_bundle_d76f6fa632f741105f4bd083dc12ea0f</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:37</sys_updated_on>
+    </sys_ux_composite_data_template_predicate_bundle>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_composite_data_template_predicate_bundle_d76f6fa632f741105f4bd083dc12ea0f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate_bundle"><sys_ux_composite_data_template_predicate_bundle action="INSERT_OR_UPDATE"><active>true</active><name>My Requests (task) bundle</name><sys_class_name>sys_ux_composite_data_template_predicate_bundle</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:37</sys_created_on><sys_id>d76f6fa632f741105f4bd083dc12ea0f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Requests (task) bundle</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_composite_data_template_predicate_bundle_d76f6fa632f741105f4bd083dc12ea0f</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:37</sys_updated_on></sys_ux_composite_data_template_predicate_bundle></record_update>]]></payload>
+        <payload_hash>-1327762662</payload_hash>
+        <record_name>My Requests (task) bundle</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>a552acfe2fbb41107d282e5df699b6d5</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>EVAM View Config Bundle</type>
+        <update_guid>6552acfe74bb411064809b151f5bcbd5</update_guid>
+        <update_guid_history>6552acfe74bb411064809b151f5bcbd5:-1327762662</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_composite_data_template_predicate_bundle">sys_ux_composite_data_template_predicate_bundle</sys_db_object>
+        <sys_id>9cabdfd7997148c1aa5baf54fb34db71</sys_id>
+        <sys_metadata>d76f6fa632f741105f4bd083dc12ea0f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests (task) bundle</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_composite_data_template_predicate_bundle_d76f6fa632f741105f4bd083dc12ea0f</sys_update_name>
+        <sys_update_version display_value="sys_ux_composite_data_template_predicate_bundle_d76f6fa632f741105f4bd083dc12ea0f">a552acfe2fbb41107d282e5df699b6d5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
