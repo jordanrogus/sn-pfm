@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_screen">
+    <sys_ux_applicability_m2m_screen action="DELETE">
+        <active>true</active>
+        <applicability/>
+        <order>0</order>
+        <screen/>
+        <sys_class_name>sys_ux_applicability_m2m_screen</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:30</sys_created_on>
+        <sys_id>df6f6fa617f74110d8da1f9d17b20b17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_screen_df6f6fa617f74110d8da1f9d17b20b17</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:30</sys_updated_on>
+    </sys_ux_applicability_m2m_screen>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_applicability_m2m_screen_df6f6fa617f74110d8da1f9d17b20b17</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_screen"><sys_ux_applicability_m2m_screen action="INSERT_OR_UPDATE"><active>true</active><applicability/><order>0</order><screen/><sys_class_name>sys_ux_applicability_m2m_screen</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:30</sys_created_on><sys_id>df6f6fa617f74110d8da1f9d17b20b17</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_applicability_m2m_screen_df6f6fa617f74110d8da1f9d17b20b17</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:30</sys_updated_on></sys_ux_applicability_m2m_screen></record_update>]]></payload>
+        <payload_hash>540123296</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>5cdbafa22ff741107d282e5df699b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:35</sys_created_on>
+        <sys_id>4e42e8fe2fbb41107d282e5df699b6a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1812b68c6b70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:35</sys_updated_on>
+        <type>Screen Applicability</type>
+        <update_guid>8a42e8fe4cbb41107b2ad0d3fc6bd6a5</update_guid>
+        <update_guid_history>8a42e8fe4cbb41107b2ad0d3fc6bd6a5:0,660224fe17bb41101a4fe0a15d6e795a:-236134146</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:12:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_applicability_m2m_screen">sys_ux_applicability_m2m_screen</sys_db_object>
+        <sys_id>6dccbe8188484caeb3fbc5f600d3d7e1</sys_id>
+        <sys_metadata>df6f6fa617f74110d8da1f9d17b20b17</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_applicability_m2m_screen_df6f6fa617f74110d8da1f9d17b20b17</sys_update_name>
+        <sys_update_version display_value="sys_ux_applicability_m2m_screen_df6f6fa617f74110d8da1f9d17b20b17">4e42e8fe2fbb41107d282e5df699b6a5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:12:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

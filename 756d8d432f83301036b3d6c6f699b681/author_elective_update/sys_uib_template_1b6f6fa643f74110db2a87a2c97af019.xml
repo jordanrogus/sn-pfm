@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_template">
+    <sys_uib_template action="DELETE">
+        <associated_types>f198e5625311101017caddeeff7b120d,dcc732935301101017caddeeff7b1255</associated_types>
+        <image display_value="ui-builder-templates-one-region.svg">a560964877311010d99bbc3f681061ce</image>
+        <label>Portal Page with Background</label>
+        <macroponent/>
+        <order>0</order>
+        <sys_class_name>sys_uib_template</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:31</sys_created_on>
+        <sys_id>1b6f6fa643f74110db2a87a2c97af019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Portal Page with Background</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_uib_template_1b6f6fa643f74110db2a87a2c97af019</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:31</sys_updated_on>
+    </sys_uib_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_uib_template_1b6f6fa643f74110db2a87a2c97af019</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_template"><sys_uib_template action="INSERT_OR_UPDATE"><associated_types>f198e5625311101017caddeeff7b120d,dcc732935301101017caddeeff7b1255</associated_types><image display_value="ui-builder-templates-one-region.svg">a560964877311010d99bbc3f681061ce</image><label>Portal Page with Background</label><macroponent/><order>0</order><sys_class_name>sys_uib_template</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:31</sys_created_on><sys_id>1b6f6fa643f74110db2a87a2c97af019</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Portal Page with Background</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_uib_template_1b6f6fa643f74110db2a87a2c97af019</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:31</sys_updated_on></sys_uib_template></record_update>]]></payload>
+        <payload_hash>842922408</payload_hash>
+        <record_name>Portal Page with Background</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>b002a0fe2fbb41107d282e5df699b6e3</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Builder Template</type>
+        <update_guid>7002a0fe6dbb4110807a7253e89036e3</update_guid>
+        <update_guid_history>7002a0fe6dbb4110807a7253e89036e3:842922408</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:14:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_uib_template">sys_uib_template</sys_db_object>
+        <sys_id>328e1a017beb4628b1406153874887c4</sys_id>
+        <sys_metadata>1b6f6fa643f74110db2a87a2c97af019</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Portal Page with Background</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_uib_template_1b6f6fa643f74110db2a87a2c97af019</sys_update_name>
+        <sys_update_version display_value="sys_uib_template_1b6f6fa643f74110db2a87a2c97af019">b002a0fe2fbb41107d282e5df699b6e3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:14:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

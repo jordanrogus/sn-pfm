@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="DELETE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition/>
+        <da_relay_models/>
+        <data/>
+        <dispatched_events/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings/>
+        <layout>{&#13;
+  "default": {&#13;
+    "children": null,&#13;
+    "items": [&#13;
+      {&#13;
+        "slotName": "wrapper",&#13;
+        "rules": {&#13;
+          "grid-area": "wrapper"&#13;
+        },&#13;
+        "styles": {&#13;
+          "display": "flex",&#13;
+          "flex-direction": "column"&#13;
+        }&#13;
+      }&#13;
+    ],&#13;
+    "root": null,&#13;
+    "rules": {&#13;
+      "grid-template-rows": "minmax(400px, auto)",&#13;
+      "grid-template-columns": "1fr",&#13;
+      "grid-template-areas": "\"wrapper\"",&#13;
+      "grid-gap": "0px",&#13;
+      "height": "100%"&#13;
+    },&#13;
+    "styles": {"background-color": "#f6f7f7"},&#13;
+    "type": "grid"&#13;
+  }&#13;
+}</layout>
+        <macroponent_dependencies/>
+        <name>Portal Page</name>
+        <props/>
+        <required_translations>[]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties/>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:38</sys_created_on>
+        <sys_id>1f6f6fa67cf74110461f31498126ae19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Portal Page</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_macroponent_1f6f6fa67cf74110461f31498126ae19</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:38</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_macroponent_1f6f6fa67cf74110461f31498126ae19</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent"><sys_ux_macroponent action="INSERT_OR_UPDATE"><associated_types/><category>page</category><component_dependencies/><composition/><da_relay_models/><data/><dispatched_events/><extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends><handled_events/><interactions/><interfaces/><internal_event_mappings/><layout>{&#13;
+  "default": {&#13;
+    "children": null,&#13;
+    "items": [&#13;
+      {&#13;
+        "slotName": "wrapper",&#13;
+        "rules": {&#13;
+          "grid-area": "wrapper"&#13;
+        },&#13;
+        "styles": {&#13;
+          "display": "flex",&#13;
+          "flex-direction": "column"&#13;
+        }&#13;
+      }&#13;
+    ],&#13;
+    "root": null,&#13;
+    "rules": {&#13;
+      "grid-template-rows": "minmax(400px, auto)",&#13;
+      "grid-template-columns": "1fr",&#13;
+      "grid-template-areas": "\"wrapper\"",&#13;
+      "grid-gap": "0px",&#13;
+      "height": "100%"&#13;
+    },&#13;
+    "styles": {"background-color": "#f6f7f7"},&#13;
+    "type": "grid"&#13;
+  }&#13;
+}</layout><macroponent_dependencies/><name>Portal Page</name><props/><required_translations>[]</required_translations><root_component/><root_component_config/><root_component_definition/><schema_version>1.0.0</schema_version><state_properties/><sys_class_name>sys_ux_macroponent</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:38</sys_created_on><sys_id>1f6f6fa67cf74110461f31498126ae19</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Portal Page</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_macroponent_1f6f6fa67cf74110461f31498126ae19</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:38</sys_updated_on></sys_ux_macroponent></record_update>]]></payload>
+        <payload_hash>782995196</payload_hash>
+        <record_name>Portal Page</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>3002a0fe2fbb41107d282e5df699b6db</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Macroponent Definition</type>
+        <update_guid>fc02a0fed1bb411053e8e517808899da</update_guid>
+        <update_guid_history>fc02a0fed1bb411053e8e517808899da:782995196</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_macroponent">sys_ux_macroponent</sys_db_object>
+        <sys_id>1d790e4648604f6e8b714b10955233a4</sys_id>
+        <sys_metadata>1f6f6fa67cf74110461f31498126ae19</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Portal Page</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_macroponent_1f6f6fa67cf74110461f31498126ae19</sys_update_name>
+        <sys_update_version display_value="sys_ux_macroponent_1f6f6fa67cf74110461f31498126ae19">3002a0fe2fbb41107d282e5df699b6db</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

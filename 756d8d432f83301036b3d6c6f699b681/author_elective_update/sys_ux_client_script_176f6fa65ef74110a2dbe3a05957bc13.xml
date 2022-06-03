@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Landing Page">1f6f6fa6f9f741102d7a742460be5618</macroponent>
+        <name>close modal</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({api, event, helpers, imports}) {
+     helpers.modal.close();
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:26</sys_created_on>
+        <sys_id>176f6fa65ef74110a2dbe3a05957bc13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>close modal</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_client_script_176f6fa65ef74110a2dbe3a05957bc13</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:26</sys_updated_on>
+        <type/>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_client_script_176f6fa65ef74110a2dbe3a05957bc13</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Landing Page"&gt;1f6f6fa6f9f741102d7a742460be5618&lt;/macroponent&gt;&lt;name&gt;close modal&lt;/name&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({api, event, helpers, imports}) {
+     helpers.modal.close();
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-06-03 17:29:26&lt;/sys_created_on&gt;&lt;sys_id&gt;176f6fa65ef74110a2dbe3a05957bc13&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;close modal&lt;/sys_name&gt;&lt;sys_package display_value="PFM" source="x_708650_pfm"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PFM"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_176f6fa65ef74110a2dbe3a05957bc13&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-03 17:29:26&lt;/sys_updated_on&gt;&lt;type/&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-176280805</payload_hash>
+        <record_name>close modal</record_name>
+        <reverted_from/>
+        <source>5cdbafa22ff741107d282e5df699b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:07</sys_created_on>
+        <sys_id>9cf1ecbe2fbb41107d282e5df699b6a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1812b676bc30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:07</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>18f1ecbe8dbb4110f7804ed79c0a60a5</update_guid>
+        <update_guid_history>18f1ecbe8dbb4110f7804ed79c0a60a5:-176280805</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>0a7b952a399e4f0c9674c318f1240a81</sys_id>
+        <sys_metadata>176f6fa65ef74110a2dbe3a05957bc13</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>close modal</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_176f6fa65ef74110a2dbe3a05957bc13</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_176f6fa65ef74110a2dbe3a05957bc13">9cf1ecbe2fbb41107d282e5df699b6a5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_template">
+    <sys_uib_template action="DELETE">
+        <associated_types>f198e5625311101017caddeeff7b120d,d5d732935301101017caddeeff7b12b3</associated_types>
+        <image display_value="ui-builder-templates-right-sidebar.svg">89ff424877311010d99bbc3f6810614e</image>
+        <label>Portal Main Content with Right Rail</label>
+        <macroponent/>
+        <order>0</order>
+        <sys_class_name>sys_uib_template</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:27</sys_created_on>
+        <sys_id>9f6f6fa6baf74110318c9b58c1481519</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Portal Main Content with Right Rail</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_uib_template_9f6f6fa6baf74110318c9b58c1481519</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:27</sys_updated_on>
+    </sys_uib_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_uib_template_9f6f6fa6baf74110318c9b58c1481519</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_template"><sys_uib_template action="INSERT_OR_UPDATE"><associated_types>f198e5625311101017caddeeff7b120d,d5d732935301101017caddeeff7b12b3</associated_types><image display_value="ui-builder-templates-right-sidebar.svg">89ff424877311010d99bbc3f6810614e</image><label>Portal Main Content with Right Rail</label><macroponent/><order>0</order><sys_class_name>sys_uib_template</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:27</sys_created_on><sys_id>9f6f6fa6baf74110318c9b58c1481519</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Portal Main Content with Right Rail</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_uib_template_9f6f6fa6baf74110318c9b58c1481519</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:27</sys_updated_on></sys_uib_template></record_update>]]></payload>
+        <payload_hash>94426195</payload_hash>
+        <record_name>Portal Main Content with Right Rail</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>fc42a8fe2fbb41107d282e5df699b6cb</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Builder Template</type>
+        <update_guid>bc42a8fe48bb4110a29df479bf2bd9cb</update_guid>
+        <update_guid_history>bc42a8fe48bb4110a29df479bf2bd9cb:94426195</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:14:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_uib_template">sys_uib_template</sys_db_object>
+        <sys_id>a764653efe6d4acf9e88bf7cdb5f8909</sys_id>
+        <sys_metadata>9f6f6fa6baf74110318c9b58c1481519</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Portal Main Content with Right Rail</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_uib_template_9f6f6fa6baf74110318c9b58c1481519</sys_update_name>
+        <sys_update_version display_value="sys_uib_template_9f6f6fa6baf74110318c9b58c1481519">fc42a8fe2fbb41107d282e5df699b6cb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:14:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

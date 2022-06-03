@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_datasource">
+    <sys_ux_composite_datasource action="DELETE">
+        <active>true</active>
+        <condition table="sc_req_item">active=true^requested_forDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="requested_for" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <encoded_query_script/>
+        <name>My Requests - Requested Item Datasource</name>
+        <sort_by>sys_created_on</sort_by>
+        <sys_class_name>sys_ux_composite_datasource</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:28</sys_created_on>
+        <sys_id>d36f6fa6def74110e9e4de3173cfdb12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests - Requested Item Datasource</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_composite_datasource_d36f6fa6def74110e9e4de3173cfdb12</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:28</sys_updated_on>
+        <table>sc_req_item</table>
+    </sys_ux_composite_datasource>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_composite_datasource_d36f6fa6def74110e9e4de3173cfdb12</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_datasource"><sys_ux_composite_datasource action="INSERT_OR_UPDATE"><active>true</active><condition table="sc_req_item">active=true^requested_forDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/><item endquery="false" field="requested_for" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></condition><encoded_query_script/><name>My Requests - Requested Item Datasource</name><sort_by>sys_created_on</sort_by><sys_class_name>sys_ux_composite_datasource</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:28</sys_created_on><sys_id>d36f6fa6def74110e9e4de3173cfdb12</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Requests - Requested Item Datasource</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_composite_datasource_d36f6fa6def74110e9e4de3173cfdb12</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:28</sys_updated_on><table>sc_req_item</table></sys_ux_composite_datasource></record_update>]]></payload>
+        <payload_hash>-1633905591</payload_hash>
+        <record_name>My Requests - Requested Item Datasource</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>5552acfe2fbb41107d282e5df699b6c3</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>EVAM Datasource</type>
+        <update_guid>1552acfeabbb41101c0c90119fdb80c3</update_guid>
+        <update_guid_history>1552acfeabbb41101c0c90119fdb80c3:-1633905591</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_composite_datasource">sys_ux_composite_datasource</sys_db_object>
+        <sys_id>444b2db2958f46209437d87073b67644</sys_id>
+        <sys_metadata>d36f6fa6def74110e9e4de3173cfdb12</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests - Requested Item Datasource</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_composite_datasource_d36f6fa6def74110e9e4de3173cfdb12</sys_update_name>
+        <sys_update_version display_value="sys_ux_composite_datasource_d36f6fa6def74110e9e4de3173cfdb12">5552acfe2fbb41107d282e5df699b6c3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

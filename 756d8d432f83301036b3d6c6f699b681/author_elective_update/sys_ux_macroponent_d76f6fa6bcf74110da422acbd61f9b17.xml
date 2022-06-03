@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="DELETE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[ {&#13;
+  "elementId" : "container_1",&#13;
+  "elementLabel" : "Container 1",&#13;
+  "propertyValues" : {&#13;
+    "label" : {&#13;
+      "type" : "TRANSLATION_LITERAL",&#13;
+      "value" : {&#13;
+        "code" : null,&#13;
+        "message" : "",&#13;
+        "comment" : ""&#13;
+      }&#13;
+    },&#13;
+    "bare" : {&#13;
+      "type" : "JSON_LITERAL",&#13;
+      "value" : true&#13;
+    }&#13;
+  },&#13;
+  "eventMappings" : [ ],&#13;
+  "slot" : null,&#13;
+  "definition" : {&#13;
+    "id" : "4b8588d1ef6ef74fbf981f602d6ae48f",&#13;
+    "type" : "MACROPONENT"&#13;
+  },&#13;
+  "overrides" : {&#13;
+    "composition" : [ {&#13;
+      "elementId" : "container_1_Main",&#13;
+      "elementLabel" : "Main",&#13;
+      "propertyValues" : {&#13;
+        "ariaRegionName" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : ""&#13;
+        },&#13;
+        "ariaRegionHeadingLevel" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : "1"&#13;
+        },&#13;
+        "includeAriaHeading" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : false&#13;
+        },&#13;
+        "type" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : "section"&#13;
+        },&#13;
+        "ariaRole" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : ""&#13;
+        }&#13;
+      },&#13;
+      "eventMappings" : [ ],&#13;
+      "slot" : null,&#13;
+      "definition" : {&#13;
+        "id" : "d356d14b6e293a3020a244b63d278d8f",&#13;
+        "type" : "MACROPONENT"&#13;
+      },&#13;
+      "overrides" : {&#13;
+        "composition" : [ {&#13;
+          "elementId" : "breadcrumbs_1",&#13;
+          "elementLabel" : "Breadcrumbs 1",&#13;
+          "propertyValues" : {&#13;
+            "items" : {&#13;
+              "type" : "DATA_OUTPUT_BINDING",&#13;
+              "binding" : {&#13;
+                "address" : [ "breadcrumbs_broker_1", "output" ]&#13;
+              }&#13;
+            },&#13;
+            "delimiter" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "chevron"&#13;
+            },&#13;
+            "overflow" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "collapse"&#13;
+            }&#13;
+          },&#13;
+          "eventMappings" : [ {&#13;
+            "eventMappingId" : "ckgrvmuquaaaaeetddghhiijaccjefffu",&#13;
+            "isConfiguration" : false,&#13;
+            "offRowStorageId" : null,&#13;
+            "sourceEventApiName" : "sn_breadcrumbs.NOW_BREADCRUMBS#ITEM_CLICKED",&#13;
+            "sourceEventCorrelationId" : null,&#13;
+            "sourceEventDefinition" : {&#13;
+              "apiName" : "sn_breadcrumbs.NOW_BREADCRUMBS#ITEM_CLICKED",&#13;
+              "id" : null,&#13;
+              "type" : "UXEVENT"&#13;
+            },&#13;
+            "sourceEventSysId" : null,&#13;
+            "targets" : [ {&#13;
+              "broker" : null,&#13;
+              "clientScript" : {&#13;
+                "sysId" : "1b6f6fa613f741107ddc92aad03bc214"&#13;
+              },&#13;
+              "conditional" : null,&#13;
+              "declarativeAction" : null,&#13;
+              "event" : null,&#13;
+              "operation" : null,&#13;
+              "targetId" : "ckgrvmuquaaaaeeuddghhiihfjjrrwrii",&#13;
+              "type" : "CLIENT_SCRIPT"&#13;
+            } ]&#13;
+          } ],&#13;
+          "slot" : null,&#13;
+          "definition" : {&#13;
+            "id" : "9c2e48402c6c25d281faeb20637f6106",&#13;
+            "type" : "MACROPONENT"&#13;
+          },&#13;
+          "overrides" : null,&#13;
+          "isHidden" : {&#13;
+            "type" : "JSON_LITERAL",&#13;
+            "value" : ""&#13;
+          },&#13;
+          "isHero" : false,&#13;
+          "isNonDestructive" : false,&#13;
+          "styles" : {&#13;
+            "margin-left" : "var(--now-static-space--xl)",&#13;
+            "margin-bottom" : "var(--now-static-space--xl)"&#13;
+          }&#13;
+        }, {&#13;
+          "elementId" : "heading_1",&#13;
+          "elementLabel" : "Heading 1",&#13;
+          "propertyValues" : {&#13;
+            "label" : {&#13;
+              "type" : "TRANSLATION_LITERAL",&#13;
+              "value" : {&#13;
+                "code" : null,&#13;
+                "message" : "Settings",&#13;
+                "comment" : ""&#13;
+              }&#13;
+            },&#13;
+            "level" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "1"&#13;
+            },&#13;
+            "variant" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "header-primary"&#13;
+            },&#13;
+            "wontWrap" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : false&#13;
+            },&#13;
+            "hasNoMargin" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : true&#13;
+            }&#13;
+          },&#13;
+          "eventMappings" : [ ],&#13;
+          "slot" : null,&#13;
+          "definition" : {&#13;
+            "id" : "1f6e0643eca7a637e36bd7833549ec9e",&#13;
+            "type" : "MACROPONENT"&#13;
+          },&#13;
+          "overrides" : null,&#13;
+          "isHidden" : {&#13;
+            "type" : "JSON_LITERAL",&#13;
+            "value" : ""&#13;
+          },&#13;
+          "isHero" : false,&#13;
+          "isNonDestructive" : false,&#13;
+          "styles" : {&#13;
+            "margin-left" : "var(--now-static-space--xl)"&#13;
+          }&#13;
+        }, {&#13;
+          "elementId" : "container_2",&#13;
+          "elementLabel" : "Container 2",&#13;
+          "propertyValues" : {&#13;
+            "ariaRegionName" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : ""&#13;
+            },&#13;
+            "includeAriaHeading" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : false&#13;
+            },&#13;
+            "ariaRegionHeadingLevel" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "1"&#13;
+            },&#13;
+            "type" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "section"&#13;
+            },&#13;
+            "ariaRole" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : ""&#13;
+            }&#13;
+          },&#13;
+          "eventMappings" : [ ],&#13;
+          "slot" : null,&#13;
+          "definition" : {&#13;
+            "id" : "d356d14b6e293a3020a244b63d278d8f",&#13;
+            "type" : "MACROPONENT"&#13;
+          },&#13;
+          "overrides" : {&#13;
+            "composition" : [ {&#13;
+              "elementId" : "tab_set_1",&#13;
+              "elementLabel" : "Tab Set 1",&#13;
+              "propertyValues" : {&#13;
+                "dynamicTabData" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : ""&#13;
+                },&#13;
+                "defaultRoute" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : "cketv4fts00003g8yxah9e3hs"&#13;
+                },&#13;
+                "viewportConfiguration" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : {&#13;
+                    "validation" : {&#13;
+                      "name" : {&#13;
+                        "required" : true&#13;
+                      },&#13;
+                      "order" : {&#13;
+                        "required" : false&#13;
+                      },&#13;
+                      "icon" : {&#13;
+                        "required" : false&#13;
+                      }&#13;
+                    },&#13;
+                    "enableDataDrivenTabs" : true&#13;
+                  }&#13;
+                },&#13;
+                "selectedTabIndex" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "maxWidth" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "fixedWidth" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "hideLabel" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "size" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : "md"&#13;
+                }&#13;
+              },&#13;
+              "eventMappings" : [ ],&#13;
+              "slot" : null,&#13;
+              "definition" : {&#13;
+                "id" : "b324da974cef96f2db1d484cfeda4e3e",&#13;
+                "type" : "MACROPONENT_VIEWPORT"&#13;
+              },&#13;
+              "overrides" : null,&#13;
+              "isHidden" : {&#13;
+                "type" : "JSON_LITERAL",&#13;
+                "value" : ""&#13;
+              },&#13;
+              "isHero" : false,&#13;
+              "isNonDestructive" : false,&#13;
+              "styles" : { }&#13;
+            } ],&#13;
+            "layout" : {&#13;
+              "default" : {&#13;
+                "children" : null,&#13;
+                "isInline" : null,&#13;
+                "items" : [{"rules":{},"styles":{"grid-area":"main"},"element_id":"tab_set_1"}],&#13;
+                "root" : null,&#13;
+                "rules" : null,&#13;
+                "styles" : {"grid-template-rows":"auto","grid-template-columns":"1fr","grid-template-areas":"\"main\"","grid-gap":"1rem","height":"100%"},&#13;
+                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",&#13;
+                "type" : "grid"&#13;
+              },&#13;
+              "version" : "3.0.0"&#13;
+            }&#13;
+          },&#13;
+          "isHidden" : {&#13;
+            "type" : "JSON_LITERAL",&#13;
+            "value" : ""&#13;
+          },&#13;
+          "isHero" : false,&#13;
+          "isNonDestructive" : false,&#13;
+          "styles" : {&#13;
+            "background-color" : "rgb(var(--now-color--neutral-0))",&#13;
+            "padding" : "var(--now-static-space--xl)",&#13;
+            "border-radius" : "2px",&#13;
+            "margin-top" : "var(--now-static-space--xxl)"&#13;
+          }&#13;
+        } ],&#13;
+        "layout" : {&#13;
+          "default" : {&#13;
+            "children" : null,&#13;
+            "isInline" : null,&#13;
+            "items" : [{"rules":{},"styles":{},"element_id":"breadcrumbs_1"},{"rules":{},"styles":{},"element_id":"heading_1"},{"rules":{},"styles":{},"element_id":"container_2"}],&#13;
+            "root" : null,&#13;
+            "rules" : {},&#13;
+            "styles" : {"height":"100%","flex-direction":"column","display":"flex"},&#13;
+            "templateId" : null,&#13;
+            "type" : "flex"&#13;
+          },&#13;
+          "version" : "3.0.0"&#13;
+        }&#13;
+      },&#13;
+      "isHidden" : {&#13;
+        "type" : "JSON_LITERAL",&#13;
+        "value" : null&#13;
+      },&#13;
+      "isHero" : false,&#13;
+      "isNonDestructive" : false,&#13;
+      "styles" : {&#13;
+        "height" : "100%"&#13;
+      }&#13;
+    } ],&#13;
+    "layout" : {&#13;
+      "default" : {&#13;
+        "children" : null,&#13;
+        "isInline" : null,&#13;
+        "items" : [{"rules":{},"styles":{"grid-area":"main"},"element_id":"container_1_Main"}],&#13;
+        "root" : null,&#13;
+        "rules" : null,&#13;
+        "styles" : {"margin":"var(--now-static-space--xxl) auto 4rem auto","grid-template-rows":"auto","grid-template-columns":"1fr 4fr 1fr","grid-template-areas":"\"sidebar1 main sidebar2\"","grid-gap":"0px var(--now-static-space--xxl)","max-width":"90rem"},&#13;
+        "templateId" : "f5ff467615f39010f87783c65626d829",&#13;
+        "type" : "grid"&#13;
+      },&#13;
+      "version" : "3.0.0"&#13;
+    }&#13;
+  },&#13;
+  "isHidden" : {&#13;
+    "type" : "JSON_LITERAL",&#13;
+    "value" : ""&#13;
+  },&#13;
+  "isHero" : false,&#13;
+  "isNonDestructive" : false,&#13;
+  "styles" : { }&#13;
+} ]</composition>
+        <da_relay_models/>
+        <data>[ {&#13;
+  "definition" : {&#13;
+    "id" : "df6f6fa658f74110ca7b3778cfc7791a",&#13;
+    "type" : "TRANSFORM"&#13;
+  },&#13;
+  "elementId" : "breadcrumbs_broker_1",&#13;
+  "elementLabel" : "Breadcrumbs broker 1",&#13;
+  "eventMappings" : [ ],&#13;
+  "inputValues" : {&#13;
+    "displayValue" : {&#13;
+      "type" : "JSON_LITERAL",&#13;
+      "value" : "Settings"&#13;
+    }&#13;
+  },&#13;
+  "readEvaluationMode" : "EAGER"&#13;
+} ]</data>
+        <dispatched_events>9b6f6fa6fff7411026d24aabce415f0e</dispatched_events>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{ }</internal_event_mappings>
+        <layout>{&#13;
+  "default" : {&#13;
+    "children" : null,&#13;
+    "isInline" : null,&#13;
+    "items" : [{"rules":{},"styles":{"grid-area":"wrapper"},"element_id":"container_1"}],&#13;
+    "root" : null,&#13;
+    "rules" : null,&#13;
+    "styles" : {"background-color":"rgb(var(--now-avatar--background-color))","grid-template-rows":"minmax(400px, auto)","grid-template-columns":"1fr","grid-template-areas":"\"wrapper\"","grid-gap":"0px","height":"100%"},&#13;
+    "templateId" : "b09f467615f39010f87783c65626d825",&#13;
+    "type" : "grid"&#13;
+  },&#13;
+  "version" : "3.0.0"&#13;
+}</layout>
+        <macroponent_dependencies/>
+        <name>Settings Page</name>
+        <props>[ ]</props>
+        <required_translations>[ {
+  "message" : "Settings",
+  "comment" : ""
+} ]</required_translations>
+        <root_component/>
+        <root_component_config>{ }</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties>[ ]</state_properties>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:34</sys_created_on>
+        <sys_id>d76f6fa6bcf74110da422acbd61f9b17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Settings Page</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_macroponent_d76f6fa6bcf74110da422acbd61f9b17</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:34</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_macroponent_d76f6fa6bcf74110da422acbd61f9b17</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent"><sys_ux_macroponent action="INSERT_OR_UPDATE"><associated_types/><category>page</category><component_dependencies/><composition>[ {&#13;
+  "elementId" : "container_1",&#13;
+  "elementLabel" : "Container 1",&#13;
+  "propertyValues" : {&#13;
+    "label" : {&#13;
+      "type" : "TRANSLATION_LITERAL",&#13;
+      "value" : {&#13;
+        "code" : null,&#13;
+        "message" : "",&#13;
+        "comment" : ""&#13;
+      }&#13;
+    },&#13;
+    "bare" : {&#13;
+      "type" : "JSON_LITERAL",&#13;
+      "value" : true&#13;
+    }&#13;
+  },&#13;
+  "eventMappings" : [ ],&#13;
+  "slot" : null,&#13;
+  "definition" : {&#13;
+    "id" : "4b8588d1ef6ef74fbf981f602d6ae48f",&#13;
+    "type" : "MACROPONENT"&#13;
+  },&#13;
+  "overrides" : {&#13;
+    "composition" : [ {&#13;
+      "elementId" : "container_1_Main",&#13;
+      "elementLabel" : "Main",&#13;
+      "propertyValues" : {&#13;
+        "ariaRegionName" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : ""&#13;
+        },&#13;
+        "ariaRegionHeadingLevel" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : "1"&#13;
+        },&#13;
+        "includeAriaHeading" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : false&#13;
+        },&#13;
+        "type" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : "section"&#13;
+        },&#13;
+        "ariaRole" : {&#13;
+          "type" : "JSON_LITERAL",&#13;
+          "value" : ""&#13;
+        }&#13;
+      },&#13;
+      "eventMappings" : [ ],&#13;
+      "slot" : null,&#13;
+      "definition" : {&#13;
+        "id" : "d356d14b6e293a3020a244b63d278d8f",&#13;
+        "type" : "MACROPONENT"&#13;
+      },&#13;
+      "overrides" : {&#13;
+        "composition" : [ {&#13;
+          "elementId" : "breadcrumbs_1",&#13;
+          "elementLabel" : "Breadcrumbs 1",&#13;
+          "propertyValues" : {&#13;
+            "items" : {&#13;
+              "type" : "DATA_OUTPUT_BINDING",&#13;
+              "binding" : {&#13;
+                "address" : [ "breadcrumbs_broker_1", "output" ]&#13;
+              }&#13;
+            },&#13;
+            "delimiter" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "chevron"&#13;
+            },&#13;
+            "overflow" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "collapse"&#13;
+            }&#13;
+          },&#13;
+          "eventMappings" : [ {&#13;
+            "eventMappingId" : "ckgrvmuquaaaaeetddghhiijaccjefffu",&#13;
+            "isConfiguration" : false,&#13;
+            "offRowStorageId" : null,&#13;
+            "sourceEventApiName" : "sn_breadcrumbs.NOW_BREADCRUMBS#ITEM_CLICKED",&#13;
+            "sourceEventCorrelationId" : null,&#13;
+            "sourceEventDefinition" : {&#13;
+              "apiName" : "sn_breadcrumbs.NOW_BREADCRUMBS#ITEM_CLICKED",&#13;
+              "id" : null,&#13;
+              "type" : "UXEVENT"&#13;
+            },&#13;
+            "sourceEventSysId" : null,&#13;
+            "targets" : [ {&#13;
+              "broker" : null,&#13;
+              "clientScript" : {&#13;
+                "sysId" : "1b6f6fa613f741107ddc92aad03bc214"&#13;
+              },&#13;
+              "conditional" : null,&#13;
+              "declarativeAction" : null,&#13;
+              "event" : null,&#13;
+              "operation" : null,&#13;
+              "targetId" : "ckgrvmuquaaaaeeuddghhiihfjjrrwrii",&#13;
+              "type" : "CLIENT_SCRIPT"&#13;
+            } ]&#13;
+          } ],&#13;
+          "slot" : null,&#13;
+          "definition" : {&#13;
+            "id" : "9c2e48402c6c25d281faeb20637f6106",&#13;
+            "type" : "MACROPONENT"&#13;
+          },&#13;
+          "overrides" : null,&#13;
+          "isHidden" : {&#13;
+            "type" : "JSON_LITERAL",&#13;
+            "value" : ""&#13;
+          },&#13;
+          "isHero" : false,&#13;
+          "isNonDestructive" : false,&#13;
+          "styles" : {&#13;
+            "margin-left" : "var(--now-static-space--xl)",&#13;
+            "margin-bottom" : "var(--now-static-space--xl)"&#13;
+          }&#13;
+        }, {&#13;
+          "elementId" : "heading_1",&#13;
+          "elementLabel" : "Heading 1",&#13;
+          "propertyValues" : {&#13;
+            "label" : {&#13;
+              "type" : "TRANSLATION_LITERAL",&#13;
+              "value" : {&#13;
+                "code" : null,&#13;
+                "message" : "Settings",&#13;
+                "comment" : ""&#13;
+              }&#13;
+            },&#13;
+            "level" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "1"&#13;
+            },&#13;
+            "variant" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "header-primary"&#13;
+            },&#13;
+            "wontWrap" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : false&#13;
+            },&#13;
+            "hasNoMargin" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : true&#13;
+            }&#13;
+          },&#13;
+          "eventMappings" : [ ],&#13;
+          "slot" : null,&#13;
+          "definition" : {&#13;
+            "id" : "1f6e0643eca7a637e36bd7833549ec9e",&#13;
+            "type" : "MACROPONENT"&#13;
+          },&#13;
+          "overrides" : null,&#13;
+          "isHidden" : {&#13;
+            "type" : "JSON_LITERAL",&#13;
+            "value" : ""&#13;
+          },&#13;
+          "isHero" : false,&#13;
+          "isNonDestructive" : false,&#13;
+          "styles" : {&#13;
+            "margin-left" : "var(--now-static-space--xl)"&#13;
+          }&#13;
+        }, {&#13;
+          "elementId" : "container_2",&#13;
+          "elementLabel" : "Container 2",&#13;
+          "propertyValues" : {&#13;
+            "ariaRegionName" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : ""&#13;
+            },&#13;
+            "includeAriaHeading" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : false&#13;
+            },&#13;
+            "ariaRegionHeadingLevel" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "1"&#13;
+            },&#13;
+            "type" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : "section"&#13;
+            },&#13;
+            "ariaRole" : {&#13;
+              "type" : "JSON_LITERAL",&#13;
+              "value" : ""&#13;
+            }&#13;
+          },&#13;
+          "eventMappings" : [ ],&#13;
+          "slot" : null,&#13;
+          "definition" : {&#13;
+            "id" : "d356d14b6e293a3020a244b63d278d8f",&#13;
+            "type" : "MACROPONENT"&#13;
+          },&#13;
+          "overrides" : {&#13;
+            "composition" : [ {&#13;
+              "elementId" : "tab_set_1",&#13;
+              "elementLabel" : "Tab Set 1",&#13;
+              "propertyValues" : {&#13;
+                "dynamicTabData" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : ""&#13;
+                },&#13;
+                "defaultRoute" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : "cketv4fts00003g8yxah9e3hs"&#13;
+                },&#13;
+                "viewportConfiguration" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : {&#13;
+                    "validation" : {&#13;
+                      "name" : {&#13;
+                        "required" : true&#13;
+                      },&#13;
+                      "order" : {&#13;
+                        "required" : false&#13;
+                      },&#13;
+                      "icon" : {&#13;
+                        "required" : false&#13;
+                      }&#13;
+                    },&#13;
+                    "enableDataDrivenTabs" : true&#13;
+                  }&#13;
+                },&#13;
+                "selectedTabIndex" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "maxWidth" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "fixedWidth" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "hideLabel" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : null&#13;
+                },&#13;
+                "size" : {&#13;
+                  "type" : "JSON_LITERAL",&#13;
+                  "value" : "md"&#13;
+                }&#13;
+              },&#13;
+              "eventMappings" : [ ],&#13;
+              "slot" : null,&#13;
+              "definition" : {&#13;
+                "id" : "b324da974cef96f2db1d484cfeda4e3e",&#13;
+                "type" : "MACROPONENT_VIEWPORT"&#13;
+              },&#13;
+              "overrides" : null,&#13;
+              "isHidden" : {&#13;
+                "type" : "JSON_LITERAL",&#13;
+                "value" : ""&#13;
+              },&#13;
+              "isHero" : false,&#13;
+              "isNonDestructive" : false,&#13;
+              "styles" : { }&#13;
+            } ],&#13;
+            "layout" : {&#13;
+              "default" : {&#13;
+                "children" : null,&#13;
+                "isInline" : null,&#13;
+                "items" : [{"rules":{},"styles":{"grid-area":"main"},"element_id":"tab_set_1"}],&#13;
+                "root" : null,&#13;
+                "rules" : null,&#13;
+                "styles" : {"grid-template-rows":"auto","grid-template-columns":"1fr","grid-template-areas":"\"main\"","grid-gap":"1rem","height":"100%"},&#13;
+                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",&#13;
+                "type" : "grid"&#13;
+              },&#13;
+              "version" : "3.0.0"&#13;
+            }&#13;
+          },&#13;
+          "isHidden" : {&#13;
+            "type" : "JSON_LITERAL",&#13;
+            "value" : ""&#13;
+          },&#13;
+          "isHero" : false,&#13;
+          "isNonDestructive" : false,&#13;
+          "styles" : {&#13;
+            "background-color" : "rgb(var(--now-color--neutral-0))",&#13;
+            "padding" : "var(--now-static-space--xl)",&#13;
+            "border-radius" : "2px",&#13;
+            "margin-top" : "var(--now-static-space--xxl)"&#13;
+          }&#13;
+        } ],&#13;
+        "layout" : {&#13;
+          "default" : {&#13;
+            "children" : null,&#13;
+            "isInline" : null,&#13;
+            "items" : [{"rules":{},"styles":{},"element_id":"breadcrumbs_1"},{"rules":{},"styles":{},"element_id":"heading_1"},{"rules":{},"styles":{},"element_id":"container_2"}],&#13;
+            "root" : null,&#13;
+            "rules" : {},&#13;
+            "styles" : {"height":"100%","flex-direction":"column","display":"flex"},&#13;
+            "templateId" : null,&#13;
+            "type" : "flex"&#13;
+          },&#13;
+          "version" : "3.0.0"&#13;
+        }&#13;
+      },&#13;
+      "isHidden" : {&#13;
+        "type" : "JSON_LITERAL",&#13;
+        "value" : null&#13;
+      },&#13;
+      "isHero" : false,&#13;
+      "isNonDestructive" : false,&#13;
+      "styles" : {&#13;
+        "height" : "100%"&#13;
+      }&#13;
+    } ],&#13;
+    "layout" : {&#13;
+      "default" : {&#13;
+        "children" : null,&#13;
+        "isInline" : null,&#13;
+        "items" : [{"rules":{},"styles":{"grid-area":"main"},"element_id":"container_1_Main"}],&#13;
+        "root" : null,&#13;
+        "rules" : null,&#13;
+        "styles" : {"margin":"var(--now-static-space--xxl) auto 4rem auto","grid-template-rows":"auto","grid-template-columns":"1fr 4fr 1fr","grid-template-areas":"\"sidebar1 main sidebar2\"","grid-gap":"0px var(--now-static-space--xxl)","max-width":"90rem"},&#13;
+        "templateId" : "f5ff467615f39010f87783c65626d829",&#13;
+        "type" : "grid"&#13;
+      },&#13;
+      "version" : "3.0.0"&#13;
+    }&#13;
+  },&#13;
+  "isHidden" : {&#13;
+    "type" : "JSON_LITERAL",&#13;
+    "value" : ""&#13;
+  },&#13;
+  "isHero" : false,&#13;
+  "isNonDestructive" : false,&#13;
+  "styles" : { }&#13;
+} ]</composition><da_relay_models/><data>[ {&#13;
+  "definition" : {&#13;
+    "id" : "df6f6fa658f74110ca7b3778cfc7791a",&#13;
+    "type" : "TRANSFORM"&#13;
+  },&#13;
+  "elementId" : "breadcrumbs_broker_1",&#13;
+  "elementLabel" : "Breadcrumbs broker 1",&#13;
+  "eventMappings" : [ ],&#13;
+  "inputValues" : {&#13;
+    "displayValue" : {&#13;
+      "type" : "JSON_LITERAL",&#13;
+      "value" : "Settings"&#13;
+    }&#13;
+  },&#13;
+  "readEvaluationMode" : "EAGER"&#13;
+} ]</data><dispatched_events>9b6f6fa6fff7411026d24aabce415f0e</dispatched_events><extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends><handled_events/><interactions/><interfaces/><internal_event_mappings>{ }</internal_event_mappings><layout>{&#13;
+  "default" : {&#13;
+    "children" : null,&#13;
+    "isInline" : null,&#13;
+    "items" : [{"rules":{},"styles":{"grid-area":"wrapper"},"element_id":"container_1"}],&#13;
+    "root" : null,&#13;
+    "rules" : null,&#13;
+    "styles" : {"background-color":"rgb(var(--now-avatar--background-color))","grid-template-rows":"minmax(400px, auto)","grid-template-columns":"1fr","grid-template-areas":"\"wrapper\"","grid-gap":"0px","height":"100%"},&#13;
+    "templateId" : "b09f467615f39010f87783c65626d825",&#13;
+    "type" : "grid"&#13;
+  },&#13;
+  "version" : "3.0.0"&#13;
+}</layout><macroponent_dependencies/><name>Settings Page</name><props>[ ]</props><required_translations>[ {
+  "message" : "Settings",
+  "comment" : ""
+} ]</required_translations><root_component/><root_component_config>{ }</root_component_config><root_component_definition/><schema_version>1.0.0</schema_version><state_properties>[ ]</state_properties><sys_class_name>sys_ux_macroponent</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:34</sys_created_on><sys_id>d76f6fa6bcf74110da422acbd61f9b17</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Settings Page</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_macroponent_d76f6fa6bcf74110da422acbd61f9b17</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:34</sys_updated_on></sys_ux_macroponent></record_update>]]></payload>
+        <payload_hash>-1665915312</payload_hash>
+        <record_name>Settings Page</record_name>
+        <reverted_from/>
+        <source>5cdbafa22ff741107d282e5df699b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:18</sys_created_on>
+        <sys_id>c7f160fe2fbb41107d282e5df699b694</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1812b6799be0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:18</sys_updated_on>
+        <type>UX Macroponent Definition</type>
+        <update_guid>43f160fef4bb411017b957ce3d06d894</update_guid>
+        <update_guid_history>43f160fef4bb411017b957ce3d06d894:-1665915312</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:12:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_macroponent">sys_ux_macroponent</sys_db_object>
+        <sys_id>4099c2644e2142ad946e9d5727fb5d19</sys_id>
+        <sys_metadata>d76f6fa6bcf74110da422acbd61f9b17</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Settings Page</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_macroponent_d76f6fa6bcf74110da422acbd61f9b17</sys_update_name>
+        <sys_update_version display_value="sys_ux_macroponent_d76f6fa6bcf74110da422acbd61f9b17">c7f160fe2fbb41107d282e5df699b694</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:12:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="DELETE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "activity_stream_compose_1",
+  "elementLabel" : "Activity Stream Compose 1",
+  "propertyValues" : {
+    "title" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "Compose",
+        "comment" : ""
+      }
+    },
+    "table" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "table" ],
+        "category" : "props"
+      }
+    },
+    "sysId" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "sysId" ],
+        "category" : "props"
+      }
+    },
+    "isNewRecord" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "fields" : {
+      "type" : "JSON_LITERAL",
+      "value" : {
+        "comments" : {
+          "name" : "comments",
+          "label" : "Additional comments (Customer Visible)",
+          "sys_readonly" : false,
+          "readonly" : false,
+          "visible" : true,
+          "type" : "journal_input",
+          "maxLength" : 1000
+        }
+      }
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : "Row 1",
+  "definition" : {
+    "id" : "77cb9632116e67049295c7c35d6a6147",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
+}, {
+  "elementId" : "activity_stream_1",
+  "elementLabel" : "Activity Stream 1",
+  "propertyValues" : {
+    "title" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "Activity",
+        "comment" : ""
+      }
+    },
+    "table" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "table" ],
+        "category" : "props"
+      }
+    },
+    "sysId" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "sysId" ],
+        "category" : "props"
+      }
+    },
+    "isNewRecord" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "showConversationFilter" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "showTileAvatars" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "showTileIcons" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "view" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "events" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "supplemental" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "ambChannels" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "userReferences" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "filterOptions" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "timestamp" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : "Row 1",
+  "definition" : {
+    "id" : "821dfc11da1d0fb007579ccb53738fd5",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : {
+    "margin-top" : "1.5rem"
+  }
+} ]</composition>
+        <da_relay_models/>
+        <data>[ ]</data>
+        <dispatched_events/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{ }</internal_event_mappings>
+        <layout>{
+  "default" : {
+    "children" : null,
+    "items" : [{"slotName":"Row 1","rules":{"grid-area":"row1"},"styles":{"display":"flex","flex-direction":"column","margin-top":"1.5rem"}}],
+    "root" : null,
+    "rules" : {"grid-template-rows":"2fr","grid-template-columns":"100%","grid-template-areas":"\"row1\"","height":"100%"},
+    "styles" : null,
+    "templateId" : "1afa9dc153c31010e6bcddeeff7b1280",
+    "type" : "grid"
+  }
+}</layout>
+        <macroponent_dependencies/>
+        <name>Activity</name>
+        <props>[ {
+  "name" : "table",
+  "label" : "table",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : null,
+  "readOnly" : false,
+  "selectable" : false
+}, {
+  "name" : "sysId",
+  "label" : "sysId",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : null,
+  "readOnly" : false,
+  "selectable" : false
+} ]</props>
+        <required_translations>[{"message":"Compose","comment":""},{"message":"Activity","comment":""},{"message":"Additional comments (Customer Visible)","comment":""}]</required_translations>
+        <root_component/>
+        <root_component_config>{ }</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties>[ ]</state_properties>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:37</sys_created_on>
+        <sys_id>576f6fa69ef741100ad88061974f680d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Activity</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_macroponent_576f6fa69ef741100ad88061974f680d</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:37</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_macroponent_576f6fa69ef741100ad88061974f680d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent"><sys_ux_macroponent action="INSERT_OR_UPDATE"><associated_types/><category>page</category><component_dependencies/><composition>[ {
+  "elementId" : "activity_stream_compose_1",
+  "elementLabel" : "Activity Stream Compose 1",
+  "propertyValues" : {
+    "title" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "Compose",
+        "comment" : ""
+      }
+    },
+    "table" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "table" ],
+        "category" : "props"
+      }
+    },
+    "sysId" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "sysId" ],
+        "category" : "props"
+      }
+    },
+    "isNewRecord" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "fields" : {
+      "type" : "JSON_LITERAL",
+      "value" : {
+        "comments" : {
+          "name" : "comments",
+          "label" : "Additional comments (Customer Visible)",
+          "sys_readonly" : false,
+          "readonly" : false,
+          "visible" : true,
+          "type" : "journal_input",
+          "maxLength" : 1000
+        }
+      }
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : "Row 1",
+  "definition" : {
+    "id" : "77cb9632116e67049295c7c35d6a6147",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
+}, {
+  "elementId" : "activity_stream_1",
+  "elementLabel" : "Activity Stream 1",
+  "propertyValues" : {
+    "title" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "Activity",
+        "comment" : ""
+      }
+    },
+    "table" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "table" ],
+        "category" : "props"
+      }
+    },
+    "sysId" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "sysId" ],
+        "category" : "props"
+      }
+    },
+    "isNewRecord" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "showConversationFilter" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "showTileAvatars" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "showTileIcons" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "view" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "events" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "supplemental" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "ambChannels" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "userReferences" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "filterOptions" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "timestamp" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : "Row 1",
+  "definition" : {
+    "id" : "821dfc11da1d0fb007579ccb53738fd5",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : {
+    "margin-top" : "1.5rem"
+  }
+} ]</composition><da_relay_models/><data>[ ]</data><dispatched_events/><extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends><handled_events/><interactions/><interfaces/><internal_event_mappings>{ }</internal_event_mappings><layout>{
+  "default" : {
+    "children" : null,
+    "items" : [{"slotName":"Row 1","rules":{"grid-area":"row1"},"styles":{"display":"flex","flex-direction":"column","margin-top":"1.5rem"}}],
+    "root" : null,
+    "rules" : {"grid-template-rows":"2fr","grid-template-columns":"100%","grid-template-areas":"\"row1\"","height":"100%"},
+    "styles" : null,
+    "templateId" : "1afa9dc153c31010e6bcddeeff7b1280",
+    "type" : "grid"
+  }
+}</layout><macroponent_dependencies/><name>Activity</name><props>[ {
+  "name" : "table",
+  "label" : "table",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : null,
+  "readOnly" : false,
+  "selectable" : false
+}, {
+  "name" : "sysId",
+  "label" : "sysId",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : null,
+  "readOnly" : false,
+  "selectable" : false
+} ]</props><required_translations>[{"message":"Compose","comment":""},{"message":"Activity","comment":""},{"message":"Additional comments (Customer Visible)","comment":""}]</required_translations><root_component/><root_component_config>{ }</root_component_config><root_component_definition/><schema_version>1.0.0</schema_version><state_properties>[ ]</state_properties><sys_class_name>sys_ux_macroponent</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:37</sys_created_on><sys_id>576f6fa69ef741100ad88061974f680d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Activity</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_macroponent_576f6fa69ef741100ad88061974f680d</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:37</sys_updated_on></sys_ux_macroponent></record_update>]]></payload>
+        <payload_hash>1876303558</payload_hash>
+        <record_name>Activity</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>530224fe2fbb41107d282e5df699b6f4</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Macroponent Definition</type>
+        <update_guid>130224fe9abb41107dfa23404da92cf4</update_guid>
+        <update_guid_history>130224fe9abb41107dfa23404da92cf4:1876303558</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_macroponent">sys_ux_macroponent</sys_db_object>
+        <sys_id>637c6c248f75430496120f5c58bb9d10</sys_id>
+        <sys_metadata>576f6fa69ef741100ad88061974f680d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Activity</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_macroponent_576f6fa69ef741100ad88061974f680d</sys_update_name>
+        <sys_update_version display_value="sys_ux_macroponent_576f6fa69ef741100ad88061974f680d">530224fe2fbb41107d282e5df699b6f4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

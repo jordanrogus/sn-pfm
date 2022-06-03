@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="DELETE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition/>
+        <da_relay_models/>
+        <data/>
+        <dispatched_events/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings/>
+        <layout>{&#13;
+  "default": {&#13;
+    "children": null,&#13;
+    "items": [&#13;
+      {&#13;
+        "slotName": "Main",&#13;
+        "rules": {&#13;
+          "grid-area": "main"&#13;
+        },&#13;
+        "styles": {&#13;
+          "display": "flex",&#13;
+          "flex-direction": "column"&#13;
+        }&#13;
+      },&#13;
+      {&#13;
+        "slotName": "Sidebar",&#13;
+        "rules": {&#13;
+          "grid-area": "sidebar"&#13;
+        },&#13;
+        "styles": {}&#13;
+      }&#13;
+    ],&#13;
+    "root": null,&#13;
+    "rules": {&#13;
+      "grid-template-rows": "auto",&#13;
+      "grid-template-columns": "2fr 1fr",&#13;
+      "grid-template-areas": "\"main sidebar\"",&#13;
+      "grid-gap": "0px 2rem",&#13;
+      "max-width": "90rem"&#13;
+    },&#13;
+    "styles": {&#13;
+      "margin": "2rem auto 4rem auto"&#13;
+    },&#13;
+    "type": "grid"&#13;
+  }&#13;
+}</layout>
+        <macroponent_dependencies/>
+        <name>Fixed Width Two-One</name>
+        <props/>
+        <required_translations>[]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties/>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:29</sys_created_on>
+        <sys_id>5b6f6fa6c9f741101c00435ff1ffc119</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fixed Width Two-One</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_macroponent_5b6f6fa6c9f741101c00435ff1ffc119</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:29</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_macroponent_5b6f6fa6c9f741101c00435ff1ffc119</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent"><sys_ux_macroponent action="INSERT_OR_UPDATE"><associated_types/><category>page</category><component_dependencies/><composition/><da_relay_models/><data/><dispatched_events/><extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends><handled_events/><interactions/><interfaces/><internal_event_mappings/><layout>{&#13;
+  "default": {&#13;
+    "children": null,&#13;
+    "items": [&#13;
+      {&#13;
+        "slotName": "Main",&#13;
+        "rules": {&#13;
+          "grid-area": "main"&#13;
+        },&#13;
+        "styles": {&#13;
+          "display": "flex",&#13;
+          "flex-direction": "column"&#13;
+        }&#13;
+      },&#13;
+      {&#13;
+        "slotName": "Sidebar",&#13;
+        "rules": {&#13;
+          "grid-area": "sidebar"&#13;
+        },&#13;
+        "styles": {}&#13;
+      }&#13;
+    ],&#13;
+    "root": null,&#13;
+    "rules": {&#13;
+      "grid-template-rows": "auto",&#13;
+      "grid-template-columns": "2fr 1fr",&#13;
+      "grid-template-areas": "\"main sidebar\"",&#13;
+      "grid-gap": "0px 2rem",&#13;
+      "max-width": "90rem"&#13;
+    },&#13;
+    "styles": {&#13;
+      "margin": "2rem auto 4rem auto"&#13;
+    },&#13;
+    "type": "grid"&#13;
+  }&#13;
+}</layout><macroponent_dependencies/><name>Fixed Width Two-One</name><props/><required_translations>[]</required_translations><root_component/><root_component_config/><root_component_definition/><schema_version>1.0.0</schema_version><state_properties/><sys_class_name>sys_ux_macroponent</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:29</sys_created_on><sys_id>5b6f6fa6c9f741101c00435ff1ffc119</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Fixed Width Two-One</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ux_macroponent_5b6f6fa6c9f741101c00435ff1ffc119</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:29</sys_updated_on></sys_ux_macroponent></record_update>]]></payload>
+        <payload_hash>-1492232223</payload_hash>
+        <record_name>Fixed Width Two-One</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>e442a8fe2fbb41107d282e5df699b6b7</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Macroponent Definition</type>
+        <update_guid>a442a8fe1fbb41100c1acc666348c6b7</update_guid>
+        <update_guid_history>a442a8fe1fbb41100c1acc666348c6b7:-1492232223</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:11:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_macroponent">sys_ux_macroponent</sys_db_object>
+        <sys_id>87351f5a2d4f47649ec05f03b8b0a044</sys_id>
+        <sys_metadata>5b6f6fa6c9f741101c00435ff1ffc119</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fixed Width Two-One</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_macroponent_5b6f6fa6c9f741101c00435ff1ffc119</sys_update_name>
+        <sys_update_version display_value="sys_ux_macroponent_5b6f6fa6c9f741101c00435ff1ffc119">e442a8fe2fbb41107d282e5df699b6b7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:11:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

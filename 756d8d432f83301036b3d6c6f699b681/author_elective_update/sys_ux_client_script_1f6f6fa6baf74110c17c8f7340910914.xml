@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Search Page">9b6f6fa676f74110e3fbe83c0b915b14</macroponent>
+        <name>handle_pagination</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[function handler({ api, event, helpers }) {
+	const props = api.context.props;
+	const fields = {
+		searchContextConfigId: props.searchContextConfigId,
+		searchTerm: props.searchTerm
+	};
+	const token = event.payload.paginationToken;
+	const params = {
+		searchFilters: props.searchFilters,
+		facetFilters: props.facetFilters,
+		disableSpellCheck: props.disableSpellCheck,
+		paginationToken: token
+	};
+	global.window.scrollTo(0, 0);
+	helpers.navigate.to('search', fields, params);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:38</sys_created_on>
+        <sys_id>1f6f6fa6baf74110c17c8f7340910914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>handle_pagination</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_client_script_1f6f6fa6baf74110c17c8f7340910914</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:38</sys_updated_on>
+        <type/>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_client_script_1f6f6fa6baf74110c17c8f7340910914</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Search Page"&gt;9b6f6fa676f74110e3fbe83c0b915b14&lt;/macroponent&gt;&lt;name&gt;handle_pagination&lt;/name&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function handler({ api, event, helpers }) {
+	const props = api.context.props;
+	const fields = {
+		searchContextConfigId: props.searchContextConfigId,
+		searchTerm: props.searchTerm
+	};
+	const token = event.payload.paginationToken;
+	const params = {
+		searchFilters: props.searchFilters,
+		facetFilters: props.facetFilters,
+		disableSpellCheck: props.disableSpellCheck,
+		paginationToken: token
+	};
+	global.window.scrollTo(0, 0);
+	helpers.navigate.to('search', fields, params);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-06-03 17:29:38&lt;/sys_created_on&gt;&lt;sys_id&gt;1f6f6fa6baf74110c17c8f7340910914&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;handle_pagination&lt;/sys_name&gt;&lt;sys_package display_value="PFM" source="x_708650_pfm"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PFM"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_1f6f6fa6baf74110c17c8f7340910914&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-03 17:29:38&lt;/sys_updated_on&gt;&lt;type/&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>357861186</payload_hash>
+        <record_name>handle_pagination</record_name>
+        <reverted_from/>
+        <source>5cdbafa22ff741107d282e5df699b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:21</sys_created_on>
+        <sys_id>fff1a0fe2fbb41107d282e5df699b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1812b67a5ec0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:21</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>7ff1a0fe69bb411091f699938b421425</update_guid>
+        <update_guid_history>7ff1a0fe69bb411091f699938b421425:357861186</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:10:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>3ad58397f2b145b0b30e42c7a8bd3040</sys_id>
+        <sys_metadata>1f6f6fa6baf74110c17c8f7340910914</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>handle_pagination</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_1f6f6fa6baf74110c17c8f7340910914</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_1f6f6fa6baf74110c17c8f7340910914">fff1a0fe2fbb41107d282e5df699b657</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:10:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

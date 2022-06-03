@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="DELETE">
+        <acl_failure_result/>
+        <api_name>x_708650_pfm.Display value block transform</api_name>
+        <description>This is used to transform the server fetched data into label value pairs to be displayed by the 'display value block' component</description>
+        <mutates_server_data>false</mutates_server_data>
+        <name>Display value block transform</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[&#13;
+  {&#13;
+    "name": "catBroker",&#13;
+    "label": "catalog item broker",&#13;
+    "fieldType": "json",&#13;
+    "valueType": "object",&#13;
+    "readOnly": false,&#13;
+    "mandatory": true,&#13;
+    "description": "Graphql Query Output"&#13;
+  },&#13;
+ {&#13;
+    "name": "table",&#13;
+    "label": "Table",&#13;
+    "fieldType": "json",&#13;
+    "valueType": "object",&#13;
+    "readOnly": false,&#13;
+    "mandatory": true,&#13;
+    "description": "Graphql Query Output"&#13;
+  },&#13;
+ {&#13;
+    "name": "user",&#13;
+    "label": "Logged in user",&#13;
+    "fieldType": "json",&#13;
+    "valueType": "object",&#13;
+    "readOnly": false,&#13;
+    "mandatory": true,&#13;
+    "description": "Graphql Query Output"&#13;
+  },&#13;
+ {&#13;
+    "name": "requested",&#13;
+    "label": "Requested For",&#13;
+    "fieldType": "json",&#13;
+    "valueType": "object",&#13;
+    "readOnly": false,&#13;
+    "mandatory": true,&#13;
+    "description": "Graphql Query Output"&#13;
+  }&#13;
+]</props>
+        <required_translations>[{"message":"Table","comment":""},{"message":"Requested For","comment":""},{"message":"Logged in user","comment":""},{"message":"Graphql Query Output","comment":""},{"message":"catalog item broker","comment":""}]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function transform(input) {
+    var modelArray = [];
+    var modelData = input.catBroker;
+    var table = input.table;
+    var user = input.user;
+    var requestedFor = input.requested;
+    function block(label, type, value) {
+        var out = {};
+		var labelNew = gs.getMessage("{0}", label);
+		out.label = labelNew;
+		var outval = {};
+		outval.type = type;
+		outval.value = value;
+		out.value = outval;
+		return out;
+	}
+    function getDate(item) {
+        if (item != undefined && item.displayValue != "" && item.displayValue != null) {
+            var itemDate = new GlideDate();
+            itemDate.setValue(item.displayValue);
+			item.displayValue = itemDate.getValue();
+            return item;
+        }
+    }
+    function addToModel(item, label) {
+        if (item != undefined && item.displayValue != "" && item.displayValue != null) {
+            modelArray.push(block(label, "string", item.displayValue));
+        }
+    }
+    if (table === 'sc_req_item') {
+        addToModel(modelData.state, "State");
+        addToModel(modelData.stage, "Stage");
+        addToModel(getDate(modelData.due_date), "Due date");
+        if (requestedFor != undefined && requestedFor != null && requestedFor != user) {
+            modelArray.push(block("Requested for", "string", requestedFor));
+        }
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.quantity, "Quantity");
+        addToModel(modelData.price, "Price");
+        var recurringPrice = modelData.recurring_price || {};
+        if (recurringPrice.displayValue && recurringPrice.displayValue.substring(1) !== "0.00") {
+            modelArray.push(block("Recurring price", "string", recurringPrice.displayValue));
+        }
+        addToModel(modelData.recurring_frequency, "Recurring frequency");
+    } else if (table === 'incident') {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.caller_id, "Caller");
+        addToModel(modelData.urgency, "Urgency");
+        addToModel(modelData.cmdb_ci, "Configuration item");
+        addToModel(modelData.assigned_to, "Assigned to");
+    } else {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+    }
+
+	addToModel(getDate(modelData.sys_created_on), "Creation date");
+    addToModel(getDate(modelData.sys_updated_on), "Last update");
+    return modelArray;
+}]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:26</sys_created_on>
+        <sys_id>df6f6fa6e2f74110229c69cdbd107019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Display value block transform</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_df6f6fa6e2f74110229c69cdbd107019</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:26</sys_updated_on>
+    </sys_ux_data_broker_transform>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ux_data_broker_transform_df6f6fa6e2f74110229c69cdbd107019</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_data_broker_transform"&gt;&lt;sys_ux_data_broker_transform action="INSERT_OR_UPDATE"&gt;&lt;acl_failure_result/&gt;&lt;api_name&gt;x_708650_pfm.Display value block transform&lt;/api_name&gt;&lt;description&gt;This is used to transform the server fetched data into label value pairs to be displayed by the 'display value block' component&lt;/description&gt;&lt;mutates_server_data&gt;false&lt;/mutates_server_data&gt;&lt;name&gt;Display value block transform&lt;/name&gt;&lt;output_schema/&gt;&lt;private&gt;false&lt;/private&gt;&lt;props&gt;[&amp;#13;
+  {&amp;#13;
+    "name": "catBroker",&amp;#13;
+    "label": "catalog item broker",&amp;#13;
+    "fieldType": "json",&amp;#13;
+    "valueType": "object",&amp;#13;
+    "readOnly": false,&amp;#13;
+    "mandatory": true,&amp;#13;
+    "description": "Graphql Query Output"&amp;#13;
+  },&amp;#13;
+ {&amp;#13;
+    "name": "table",&amp;#13;
+    "label": "Table",&amp;#13;
+    "fieldType": "json",&amp;#13;
+    "valueType": "object",&amp;#13;
+    "readOnly": false,&amp;#13;
+    "mandatory": true,&amp;#13;
+    "description": "Graphql Query Output"&amp;#13;
+  },&amp;#13;
+ {&amp;#13;
+    "name": "user",&amp;#13;
+    "label": "Logged in user",&amp;#13;
+    "fieldType": "json",&amp;#13;
+    "valueType": "object",&amp;#13;
+    "readOnly": false,&amp;#13;
+    "mandatory": true,&amp;#13;
+    "description": "Graphql Query Output"&amp;#13;
+  },&amp;#13;
+ {&amp;#13;
+    "name": "requested",&amp;#13;
+    "label": "Requested For",&amp;#13;
+    "fieldType": "json",&amp;#13;
+    "valueType": "object",&amp;#13;
+    "readOnly": false,&amp;#13;
+    "mandatory": true,&amp;#13;
+    "description": "Graphql Query Output"&amp;#13;
+  }&amp;#13;
+]&lt;/props&gt;&lt;required_translations&gt;[{"message":"Table","comment":""},{"message":"Requested For","comment":""},{"message":"Logged in user","comment":""},{"message":"Graphql Query Output","comment":""},{"message":"catalog item broker","comment":""}]&lt;/required_translations&gt;&lt;schema_version&gt;1.0.0&lt;/schema_version&gt;&lt;script&gt;&lt;![CDATA[function transform(input) {
+    var modelArray = [];
+    var modelData = input.catBroker;
+    var table = input.table;
+    var user = input.user;
+    var requestedFor = input.requested;
+    function block(label, type, value) {
+        var out = {};
+		var labelNew = gs.getMessage("{0}", label);
+		out.label = labelNew;
+		var outval = {};
+		outval.type = type;
+		outval.value = value;
+		out.value = outval;
+		return out;
+	}
+    function getDate(item) {
+        if (item != undefined &amp;&amp; item.displayValue != "" &amp;&amp; item.displayValue != null) {
+            var itemDate = new GlideDate();
+            itemDate.setValue(item.displayValue);
+			item.displayValue = itemDate.getValue();
+            return item;
+        }
+    }
+    function addToModel(item, label) {
+        if (item != undefined &amp;&amp; item.displayValue != "" &amp;&amp; item.displayValue != null) {
+            modelArray.push(block(label, "string", item.displayValue));
+        }
+    }
+    if (table === 'sc_req_item') {
+        addToModel(modelData.state, "State");
+        addToModel(modelData.stage, "Stage");
+        addToModel(getDate(modelData.due_date), "Due date");
+        if (requestedFor != undefined &amp;&amp; requestedFor != null &amp;&amp; requestedFor != user) {
+            modelArray.push(block("Requested for", "string", requestedFor));
+        }
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.quantity, "Quantity");
+        addToModel(modelData.price, "Price");
+        var recurringPrice = modelData.recurring_price || {};
+        if (recurringPrice.displayValue &amp;&amp; recurringPrice.displayValue.substring(1) !== "0.00") {
+            modelArray.push(block("Recurring price", "string", recurringPrice.displayValue));
+        }
+        addToModel(modelData.recurring_frequency, "Recurring frequency");
+    } else if (table === 'incident') {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.caller_id, "Caller");
+        addToModel(modelData.urgency, "Urgency");
+        addToModel(modelData.cmdb_ci, "Configuration item");
+        addToModel(modelData.assigned_to, "Assigned to");
+    } else {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+    }
+
+	addToModel(getDate(modelData.sys_created_on), "Creation date");
+    addToModel(getDate(modelData.sys_updated_on), "Last update");
+    return modelArray;
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_ux_data_broker_transform&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-06-03 17:29:26&lt;/sys_created_on&gt;&lt;sys_id&gt;df6f6fa6e2f74110229c69cdbd107019&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Display value block transform&lt;/sys_name&gt;&lt;sys_package display_value="PFM" source="x_708650_pfm"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PFM"&gt;756d8d432f83301036b3d6c6f699b681&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_data_broker_transform_df6f6fa6e2f74110229c69cdbd107019&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-03 17:29:26&lt;/sys_updated_on&gt;&lt;/sys_ux_data_broker_transform&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-705283060</payload_hash>
+        <record_name>Display value block transform</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>1a8264322ffb41107d282e5df699b676</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Data Broker Server Script</type>
+        <update_guid>d6826432d0fb4110bcdfc3a7b95f6576</update_guid>
+        <update_guid_history>d6826432d0fb4110bcdfc3a7b95f6576:-705283060</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:12:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_data_broker_transform">sys_ux_data_broker_transform</sys_db_object>
+        <sys_id>229398e2207140f7b863ae4fee715889</sys_id>
+        <sys_metadata>df6f6fa6e2f74110229c69cdbd107019</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Display value block transform</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ux_data_broker_transform_df6f6fa6e2f74110229c69cdbd107019</sys_update_name>
+        <sys_update_version display_value="sys_ux_data_broker_transform_df6f6fa6e2f74110229c69cdbd107019">1a8264322ffb41107d282e5df699b676</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:12:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
