@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="DELETE">
+        <group/>
+        <hidden>false</hidden>
+        <name>custom_portal_approval_x_708650_pfm</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:36</sys_created_on>
+        <sys_id>136f6fa663f74110cd5eabfa8faf5d19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Custom portal (x_708650_pfm)</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ui_view_136f6fa663f74110cd5eabfa8faf5d19</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:36</sys_updated_on>
+        <title>Custom portal (x_708650_pfm)</title>
+        <user/>
+    </sys_ui_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_ui_view_136f6fa663f74110cd5eabfa8faf5d19</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view"><sys_ui_view action="INSERT_OR_UPDATE"><group/><hidden>false</hidden><name>custom_portal_approval_x_708650_pfm</name><roles/><sys_class_name>sys_ui_view</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:36</sys_created_on><sys_id>136f6fa663f74110cd5eabfa8faf5d19</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Custom portal (x_708650_pfm)</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_ui_view_136f6fa663f74110cd5eabfa8faf5d19</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:36</sys_updated_on><title>Custom portal (x_708650_pfm)</title><user/></sys_ui_view></record_update>]]></payload>
+        <payload_hash>508876502</payload_hash>
+        <record_name>Custom portal (x_708650_pfm)</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>bbcf5cfa2fbb41107d282e5df699b634</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UI View</type>
+        <update_guid>7bcf5cfa27bb411044a820950da87134</update_guid>
+        <update_guid_history>7bcf5cfa27bb411044a820950da87134:508876502</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:00:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_view">sys_ui_view</sys_db_object>
+        <sys_id>2206aae5d7e94bb8994d5cbce07807a4</sys_id>
+        <sys_metadata>136f6fa663f74110cd5eabfa8faf5d19</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Custom portal (x_708650_pfm)</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_ui_view_136f6fa663f74110cd5eabfa8faf5d19</sys_update_name>
+        <sys_update_version display_value="sys_ui_view_136f6fa663f74110cd5eabfa8faf5d19">bbcf5cfa2fbb41107d282e5df699b634</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:00:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

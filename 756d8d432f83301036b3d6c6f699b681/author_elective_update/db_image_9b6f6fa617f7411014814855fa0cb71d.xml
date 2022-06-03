@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height>512</height>
+        <image>576f6fa66df74110641b955379ccdc1d</image>
+        <name>x_708650_pfm.custom_portal_banner.svg</name>
+        <size_bytes>26955</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:35</sys_created_on>
+        <sys_id>9b6f6fa617f7411014814855fa0cb71d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_708650_pfm.custom_portal_banner.svg</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>db_image_9b6f6fa617f7411014814855fa0cb71d</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:35</sys_updated_on>
+        <thumbnail/>
+        <width>1041</width>
+    </db_image>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>db_image_9b6f6fa617f7411014814855fa0cb71d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format/><height>512</height><image>576f6fa66df74110641b955379ccdc1d</image><name>x_708650_pfm.custom_portal_banner.svg</name><size_bytes>26955</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:35</sys_created_on><sys_id>9b6f6fa617f7411014814855fa0cb71d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_708650_pfm.custom_portal_banner.svg</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>db_image_9b6f6fa617f7411014814855fa0cb71d</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:35</sys_updated_on><thumbnail/><width>1041</width></db_image></record_update>]]></payload>
+        <payload_hash>1113413110</payload_hash>
+        <record_name>x_708650_pfm.custom_portal_banner.svg</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>360f18ba2fbb41107d282e5df699b613</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Images</type>
+        <update_guid>f20f18ba64bb411092c13dbf28df2113</update_guid>
+        <update_guid_history>f20f18ba64bb411092c13dbf28df2113:1113413110</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_708650_pfm.custom_portal_banner.svg">f20f18ba2fbb41107d282e5df699b617</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 20:57:27</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>1992711d62494548925fd66f0f0b6f29</sys_id>
+        <sys_metadata>9b6f6fa617f7411014814855fa0cb71d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_708650_pfm.custom_portal_banner.svg</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>db_image_9b6f6fa617f7411014814855fa0cb71d</sys_update_name>
+        <sys_update_version display_value="db_image_9b6f6fa617f7411014814855fa0cb71d">360f18ba2fbb41107d282e5df699b613</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:57:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

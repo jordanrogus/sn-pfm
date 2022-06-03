@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:29</sys_created_on>
+        <sys_id>e47f6fa62ff741107d282e5df699b6dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>136f6fa686f741100112eacd49cf2d1b.snc_internal</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_security_acl display_value="">9f6f6fa6bbf74110d8e66cef2062a11a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_e47f6fa62ff741107d282e5df699b6dd</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:29</sys_updated_on>
+        <sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role>
+        <transaction_id>5e6f2fa62ff741107d282e5df699b6a0</transaction_id>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_security_acl_role_e47f6fa62ff741107d282e5df699b6dd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:29</sys_created_on><sys_id>e47f6fa62ff741107d282e5df699b6dd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>136f6fa686f741100112eacd49cf2d1b.snc_internal</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_security_acl display_value="">9f6f6fa6bbf74110d8e66cef2062a11a</sys_security_acl><sys_update_name>sys_security_acl_role_e47f6fa62ff741107d282e5df699b6dd</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:29</sys_updated_on><sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role><transaction_id>5e6f2fa62ff741107d282e5df699b6a0</transaction_id></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1410516190</payload_hash>
+        <record_name>136f6fa686f741100112eacd49cf2d1b.snc_internal</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>ef50a83e2fbb41107d282e5df699b6b0</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Access Roles</type>
+        <update_guid>af50a83ed0bb4110ed191b00268727b0</update_guid>
+        <update_guid_history>af50a83ed0bb4110ed191b00268727b0:-1410516190</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="136f6fa686f741100112eacd49cf2d1b.snc_internal">2b50a83e2fbb41107d282e5df699b6b2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:03:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>21fa69dcb02a4a13a21b5fe4f565beb9</sys_id>
+        <sys_metadata>e47f6fa62ff741107d282e5df699b6dd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>136f6fa686f741100112eacd49cf2d1b.snc_internal</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_e47f6fa62ff741107d282e5df699b6dd</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_e47f6fa62ff741107d282e5df699b6dd">ef50a83e2fbb41107d282e5df699b6b0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:03:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
