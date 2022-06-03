@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition/>
+        <da_relay_models/>
+        <data/>
+        <dispatched_events/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings/>
+        <layout>{&#13;
+  "default": {&#13;
+    "children": null,&#13;
+    "items": [&#13;
+      {&#13;
+        "slotName": "Main",&#13;
+        "rules": {&#13;
+          "grid-area": "main"&#13;
+        },&#13;
+        "styles": {&#13;
+          "display": "flex",&#13;
+          "flex-direction": "column"&#13;
+        }&#13;
+      },&#13;
+      {&#13;
+        "slotName": "Sidebar",&#13;
+        "rules": {&#13;
+          "grid-area": "sidebar"&#13;
+        },&#13;
+        "styles": {}&#13;
+      }&#13;
+    ],&#13;
+    "root": null,&#13;
+    "rules": {&#13;
+      "grid-template-rows": "auto",&#13;
+      "grid-template-columns": "2fr 1fr",&#13;
+      "grid-template-areas": "\"main sidebar\"",&#13;
+      "grid-gap": "0px 2rem",&#13;
+      "max-width": "90rem"&#13;
+    },&#13;
+    "styles": {&#13;
+      "margin": "2rem auto 4rem auto"&#13;
+    },&#13;
+    "type": "grid"&#13;
+  }&#13;
+}</layout>
+        <macroponent_dependencies/>
+        <name>Fixed Width Two-One</name>
+        <props/>
+        <required_translations>[]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties/>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:29</sys_created_on>
+        <sys_id>5b6f6fa6c9f741101c00435ff1ffc119</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fixed Width Two-One</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_macroponent_5b6f6fa6c9f741101c00435ff1ffc119</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:29</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>
