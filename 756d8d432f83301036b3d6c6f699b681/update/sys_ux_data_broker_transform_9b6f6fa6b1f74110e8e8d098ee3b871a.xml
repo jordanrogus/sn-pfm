@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
+        <acl_failure_result/>
+        <api_name>x_708650_pfm.Content set - Related items list</api_name>
+        <description>Used to convert the evam data to required content set format in the related items section of the catalog page of custom portal</description>
+        <mutates_server_data>false</mutates_server_data>
+        <name>Content set - Related items list</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[&#13;
+  {&#13;
+    "name": "evambroker",&#13;
+    "label": "broker",&#13;
+    "fieldType": "json",&#13;
+    "valueType": "object",&#13;
+    "readOnly": false,&#13;
+    "mandatory": true,&#13;
+    "description": "Graphql Query Output"&#13;
+  }&#13;
+]</props>
+        <required_translations/>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function transform(input) {
+	for(var i = 0; i < input.evambroker.items.length; i++){
+		var model = input.evambroker.items[i].propValues;
+		if(model.model["related_sc_cat_item.recurring_frequency"] != null)
+			model.subtitle = model.subtitle + " with " + model.model["related_sc_cat_item.recurring_price"] + " " + model.model["related_sc_cat_item.recurring_frequency"];
+	}
+	return input;
+}]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:28</sys_created_on>
+        <sys_id>9b6f6fa6b1f74110e8e8d098ee3b871a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content set - Related items list</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_9b6f6fa6b1f74110e8e8d098ee3b871a</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:28</sys_updated_on>
+    </sys_ux_data_broker_transform>
+    <sys_translated_text action="delete_multiple" query="documentkey=9b6f6fa6b1f74110e8e8d098ee3b871a"/>
+</record_update>
