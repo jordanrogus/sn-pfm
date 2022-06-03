@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>ACL for databroker: Image for record header</description>
+        <name>5f6f6fa65ef741102603be352391521a</name>
+        <operation display_value="execute">execute</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-06-03 17:29:25</sys_created_on>
+        <sys_id>d36f6fa63ff741104b7858449cea6b1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5f6f6fa65ef741102603be352391521a</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_update_name>sys_security_acl_d36f6fa63ff741104b7858449cea6b1b</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-03 17:29:25</sys_updated_on>
+        <type display_value="ux_data_broker">6d9c40e9531210101cb3ddeeff7b12f6</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PFM">756d8d432f83301036b3d6c6f699b681</application>
+        <file_path/>
+        <instance_id>7186f5c7dbbb9f803353f22ebf961937</instance_id>
+        <instance_name>dev70164</instance_name>
+        <name>sys_security_acl_d36f6fa63ff741104b7858449cea6b1b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>ACL for databroker: Image for record header</description><name>5f6f6fa65ef741102603be352391521a</name><operation display_value="execute">execute</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-06-03 17:29:25</sys_created_on><sys_id>d36f6fa63ff741104b7858449cea6b1b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>5f6f6fa65ef741102603be352391521a</sys_name><sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package><sys_policy/><sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope><sys_update_name>sys_security_acl_d36f6fa63ff741104b7858449cea6b1b</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-06-03 17:29:25</sys_updated_on><type display_value="ux_data_broker">6d9c40e9531210101cb3ddeeff7b12f6</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>253008612</payload_hash>
+        <record_name>5f6f6fa65ef741102603be352391521a</record_name>
+        <reverted_from/>
+        <source>9c807c532f3201107d282e5df699b614</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-04-16 18:27:55</sys_created_on>
+        <sys_id>7f50a83e2fbb41107d282e5df699b6c7</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18033a1abf80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Access Control</type>
+        <update_guid>3f50a83eb3bb411093fd6456f70169c7</update_guid>
+        <update_guid_history>3f50a83eb3bb411093fd6456f70169c7:253008612</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-03 21:03:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>44c2f5422cd744abbae81214564989b1</sys_id>
+        <sys_metadata>d36f6fa63ff741104b7858449cea6b1b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5f6f6fa65ef741102603be352391521a</sys_name>
+        <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
+        <sys_scope_delete display_value="">b3e288420e8b4926a3c263a60b84ee51</sys_scope_delete>
+        <sys_update_name>sys_security_acl_d36f6fa63ff741104b7858449cea6b1b</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_d36f6fa63ff741104b7858449cea6b1b">7f50a83e2fbb41107d282e5df699b6c7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-03 21:03:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
