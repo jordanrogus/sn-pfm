@@ -14,7 +14,7 @@
   "message" : "UserMenu",
   "comment" : ""
 } ]</required_translations>
-        <route/>
+        <route display_value="Landing Page">1175643694fb4110b7dce5b94daa25d6</route>
         <suffix/>
         <sys_class_name>sys_ux_page_property</sys_class_name>
         <sys_created_by>system</sys_created_by>
@@ -22,16 +22,16 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>99756436a0fb411031d9610d3e3583cc</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>chrome_header</sys_name>
         <sys_package display_value="PFM" source="x_708650_pfm">756d8d432f83301036b3d6c6f699b681</sys_package>
         <sys_policy/>
         <sys_scope display_value="PFM">756d8d432f83301036b3d6c6f699b681</sys_scope>
         <sys_update_name>sys_ux_page_property_99756436a0fb411031d9610d3e3583cc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-06-09 18:54:56</sys_updated_on>
+        <sys_updated_on>2022-06-09 19:08:03</sys_updated_on>
         <type>json</type>
-        <unique_name>x_708650_pfm.99756436d0fb41102cf5527a9b32e7ca.root.chrome_header</unique_name>
+        <unique_name>x_708650_pfm.99756436d0fb41102cf5527a9b32e7ca.route.chrome_header.1175643694fb4110b7dce5b94daa25d6</unique_name>
         <value>{"privatePage":{"searchEnabled":false,"userPrefsEnabled":true,"currentScreenLinkConfiguration":{"roles":["admin"],"position":250},"globalTools":{"collapsingMenuId":0,"primaryItems":[{"label":"UserMenu","icon":"user","type":"menu","primaryDisplay":"icon","value":{"children":[{"label":{"translatable":true,"message":"Settings"},"position":100,"type":"navigation","value":{"type":"route","value":{"route":"settings","fields":{}}}},{"label":{"translatable":true,"message":"Logout"},"position":500,"type":"navigation","value":{"type":"AUTH_ROUTE_BINDING","binding":{"address":["logout"],"params":{"reload":true},"default":"/logout.do"}}}]}}],"secondaryItems":[]}},"publicPage":{"menuEnabled":true,"logoRoute":{"type":"route","value":{"route":"landing","fields":{}}}}}</value>
     </sys_ux_page_property>
     <sys_translated_text action="delete_multiple" query="documentkey=99756436a0fb411031d9610d3e3583cc"/>
